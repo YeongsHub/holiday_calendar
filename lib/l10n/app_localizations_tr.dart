@@ -554,4 +554,31 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get exportBridgeDayTitle => 'İzin (köprü günü)';
+
+  @override
+  String get removeAdsTitle => 'Reklamları kaldır';
+
+  @override
+  String get removeAdsSubtitle => 'Bir kez öde, sonsuza dek reklamsız.';
+
+  @override
+  String buyForPrice(String price) {
+    return '$price karşılığında satın al';
+  }
+
+  @override
+  String get buyNow => 'Şimdi satın al';
+
+  @override
+  String get restorePurchases => 'Satın alımları geri yükle';
+
+  @override
+  String get premiumActiveTitle => 'Reklamsız mod etkin';
+
+  @override
+  String get premiumActiveSubtitle => 'Desteğiniz için teşekkürler!';
+
+  @override
+  String get purchaseError =>
+      'Satın alma tamamlanamadı. Lütfen daha sonra tekrar deneyin.';
 }

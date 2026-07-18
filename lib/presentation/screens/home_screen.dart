@@ -14,7 +14,9 @@ import 'package:holiday_calendar/presentation/widgets/bridge_day_preview.dart';
 import 'package:holiday_calendar/presentation/widgets/calendar/holiday_calendar.dart';
 import 'package:holiday_calendar/presentation/widgets/common/error_widget.dart';
 import 'package:holiday_calendar/presentation/widgets/common/loading_shimmer.dart';
+import 'package:holiday_calendar/presentation/providers/premium_provider.dart';
 import 'package:holiday_calendar/presentation/widgets/filter_bar.dart';
+import 'package:holiday_calendar/presentation/widgets/premium_dialog.dart';
 import 'package:holiday_calendar/presentation/widgets/vacation_efficiency_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -117,6 +119,12 @@ class HomeScreen extends ConsumerWidget {
           ],
         ),
         actions: [
+          if (!(ref.watch(premiumStatusProvider).valueOrNull ?? false))
+            IconButton(
+              icon: const Icon(Icons.workspace_premium_outlined),
+              tooltip: l10n.removeAdsTitle,
+              onPressed: () => PremiumDialog.show(context),
+            ),
           IconButton(
             icon: const Icon(Icons.notifications_outlined),
             tooltip: l10n.notifications,

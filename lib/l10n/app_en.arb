@@ -38,15 +38,17 @@
   "bridgeDayLabel": "{days} vacation days → {total} days off",
   "@bridgeDayLabel": {
     "placeholders": {
-      "days": {"type": "int"},
-      "total": {"type": "int"}
+      "days": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
-
   "language": "Language",
   "settings": "Settings",
   "systemDefault": "System language",
-
   "aboutApp": "About This App",
   "importantInfoHeader": "⚠️ IMPORTANT INFORMATION",
   "disclaimerBody": "This app is NOT an official government application and is not affiliated with any government agency. It is an independent, private information service. For binding information, please contact the relevant authorities directly.",
@@ -58,21 +60,26 @@
   "sourceOpenHolidaysLabel": "OpenHolidays API",
   "privacyPolicy": "Privacy Policy",
   "close": "Close",
-
   "yearOverview": "Year Overview",
   "notifications": "Notifications",
-
   "dDayLabel": "D-{days}",
   "@dDayLabel": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowIsHoliday": "Tomorrow is a holiday",
   "daysRemaining": "{days} days left",
   "@daysRemaining": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowVacationStarts": "Vacation starts tomorrow",
-
   "onboardingHeadline": "1 day off.\n4 days free.",
   "onboardingSubtitle": "Find the best bridge days in your federal state and maximize your vacation.",
   "featureAllHolidays": "All holidays at a glance",
@@ -90,24 +97,29 @@
   "showSchoolHolidays": "Show school holidays",
   "showSchoolHolidaysSubtitleShort": "Your federal state's school holidays in the calendar",
   "done": "Done",
-
   "previousYear": "Previous year",
   "nextYear": "Next year",
   "nationwide": "Nationwide",
   "regional": "Regional",
   "additionalDaysOff": "Additional day off",
-
   "bridgeDaysWithYear": "Bridge Days {year}",
   "@bridgeDaysWithYear": {
-    "placeholders": {"year": {"type": "int"}}
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
   },
   "daysCount": "{count} days",
   "@daysCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "calendarExportFailed": "Calendar export could not be opened.",
   "addToCalendar": "Add to calendar",
-
   "notificationHeaderSubtitle": "Get reminded in time about optimal vacation days",
   "notificationsNotSupported": "Notifications are not supported on this platform.",
   "bridgeDayNotifications": "Bridge Day Notifications",
@@ -117,7 +129,11 @@
   "remindBefore": "Remind before",
   "daysBefore": "{days} days before",
   "@daysBefore": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "monthlySummary": "Monthly Summary",
   "monthlySummarySubtitle": "Get an overview of the holidays on the 1st of every month",
@@ -133,20 +149,21 @@
   "errorLoadingSettings": "Error loading settings",
   "cancel": "Cancel",
   "ok": "OK",
-
   "selectState": "Select federal state",
   "selectYearAndMonth": "Select year and month",
-
   "bridgeDayTips": "Bridge Day Tips",
   "showAll": "Show all",
   "vacationToDaysOff": "{vacationDays} → {totalDaysOff} days",
   "@vacationToDaysOff": {
     "placeholders": {
-      "vacationDays": {"type": "int"},
-      "totalDaysOff": {"type": "int"}
+      "vacationDays": {
+        "type": "int"
+      },
+      "totalDaysOff": {
+        "type": "int"
+      }
     }
   },
-
   "vacationSettings": "Vacation Settings",
   "annualVacationDays": "Annual vacation (days)",
   "remainingVacationReminder": "Remaining Vacation Reminder",
@@ -157,49 +174,69 @@
   "daysTakenOfTotal": "{used} of {total} days taken",
   "@daysTakenOfTotal": {
     "placeholders": {
-      "used": {"type": "int"},
-      "total": {"type": "int"}
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "daysRemainingCount": "{count} days left",
   "@daysRemainingCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "bestVacationEfficiency": "Best Vacation Efficiency",
   "noBridgeDaysAvailable": "No bridge days available",
   "oneVacationDayEquals": "1 vacation day = {totalDaysOff} days off",
   "@oneVacationDayEquals": {
-    "placeholders": {"totalDaysOff": {"type": "int"}}
+    "placeholders": {
+      "totalDaysOff": {
+        "type": "int"
+      }
+    }
   },
-
   "legalHoliday": "Public Holiday",
   "noHoliday": "No holiday",
   "durationDaysParen": "({count} days)",
   "@durationDaysParen": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "addVacation": "Add vacation",
   "moreHolidays": "More holidays",
   "addedToCalendar": "{name} will be added to the calendar",
   "@addedToCalendar": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "takeMondayOff": "Take Monday off",
   "takeFridayOff": "Take Friday off",
   "fourDaysOffPossible": "→ 4 days off possible!",
   "bridgeDayTip": "Bridge Day Tip",
-
   "calendarWeekNumber": "CW{week}",
   "@calendarWeekNumber": {
-    "placeholders": {"week": {"type": "int"}}
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
   },
   "labelOptional": "Label (optional)",
   "from": "From",
   "to": "To",
   "vacationDefaultTitle": "Vacation",
-
   "adLabel": "Ad",
-
   "monday": "Monday",
   "tuesday": "Tuesday",
   "wednesday": "Wednesday",
@@ -207,17 +244,24 @@
   "friday": "Friday",
   "saturday": "Saturday",
   "sunday": "Sunday",
-
   "notifHolidayInDaysTitle": "Next holiday in {days} days!",
   "@notifHolidayInDaysTitle": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "notifPlanNowBody": "Plan your bridge days now and maximize your vacation.",
   "notifRemainingBridgeTitle": "{count} bridge days left in {year}",
   "@notifRemainingBridgeTitle": {
     "placeholders": {
-      "count": {"type": "int"},
-      "year": {"type": "int"}
+      "count": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
     }
   },
   "notifPlanBestBody": "Plan now and get the most out of your vacation!",
@@ -225,37 +269,68 @@
   "notifNextHolidayBody": "{date} — {name}. Open the app for bridge day tips!",
   "@notifNextHolidayBody": {
     "placeholders": {
-      "date": {"type": "String"},
-      "name": {"type": "String"}
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
     }
   },
   "notifHolidayIn7DaysTitle": "In 7 days: {name}",
   "@notifHolidayIn7DaysTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifTimeToPlanBody": "Still time to plan! Check out the bridge days.",
   "notifHolidayTomorrowTitle": "Tomorrow: {name} 🎉",
   "@notifHolidayTomorrowTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifEnjoyDayOffBody": "Enjoy your day off!",
   "notifMonthlySummaryTitle": "{month}: {count, plural, one{{count} holiday} other{{count} holidays}}",
   "@notifMonthlySummaryTitle": {
     "placeholders": {
-      "month": {"type": "String"},
-      "count": {"type": "int"}
+      "month": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
     }
   },
   "notifMonthlySummaryBody": "Open the app and find the best bridge days in {month}!",
   "@notifMonthlySummaryBody": {
-    "placeholders": {"month": {"type": "String"}}
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
   },
   "notifChannelName": "Bridge Day Reminders",
   "notifChannelDescription": "Reminders for bridge day vacation planning",
-
   "exportBridgeDaySummary": "Bridge Days: {holidays}",
   "@exportBridgeDaySummary": {
-    "placeholders": {"holidays": {"type": "String"}}
+    "placeholders": {
+      "holidays": {
+        "type": "String"
+      }
+    }
   },
-  "exportBridgeDayTitle": "Vacation (Bridge Day)"
+  "exportBridgeDayTitle": "Vacation (Bridge Day)",
+  "removeAdsTitle": "Remove ads",
+  "removeAdsSubtitle": "Pay once, ad-free forever.",
+  "buyForPrice": "Buy for {price}",
+  "buyNow": "Buy now",
+  "restorePurchases": "Restore purchases",
+  "premiumActiveTitle": "Ad-free active",
+  "premiumActiveSubtitle": "Thank you for your support!",
+  "purchaseError": "Purchase could not be completed. Please try again later."
 }

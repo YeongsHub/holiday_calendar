@@ -558,4 +558,30 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get exportBridgeDayTitle => 'إجازة (يوم جسر)';
+
+  @override
+  String get removeAdsTitle => 'إزالة الإعلانات';
+
+  @override
+  String get removeAdsSubtitle => 'ادفع مرة واحدة، بدون إعلانات للأبد.';
+
+  @override
+  String buyForPrice(String price) {
+    return 'اشترِ مقابل $price';
+  }
+
+  @override
+  String get buyNow => 'اشترِ الآن';
+
+  @override
+  String get restorePurchases => 'استعادة المشتريات';
+
+  @override
+  String get premiumActiveTitle => 'وضع بدون إعلانات مفعّل';
+
+  @override
+  String get premiumActiveSubtitle => 'شكرًا لدعمك!';
+
+  @override
+  String get purchaseError => 'تعذّر إتمام الشراء. يُرجى المحاولة لاحقًا.';
 }

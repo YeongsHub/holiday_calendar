@@ -555,4 +555,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get exportBridgeDayTitle => 'Vacation (Bridge Day)';
+
+  @override
+  String get removeAdsTitle => 'Remove ads';
+
+  @override
+  String get removeAdsSubtitle => 'Pay once, ad-free forever.';
+
+  @override
+  String buyForPrice(String price) {
+    return 'Buy for $price';
+  }
+
+  @override
+  String get buyNow => 'Buy now';
+
+  @override
+  String get restorePurchases => 'Restore purchases';
+
+  @override
+  String get premiumActiveTitle => 'Ad-free active';
+
+  @override
+  String get premiumActiveSubtitle => 'Thank you for your support!';
+
+  @override
+  String get purchaseError =>
+      'Purchase could not be completed. Please try again later.';
 }

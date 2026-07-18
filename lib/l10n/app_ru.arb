@@ -38,15 +38,17 @@
   "bridgeDayLabel": "{days} дней отпуска → {total} выходных дней",
   "@bridgeDayLabel": {
     "placeholders": {
-      "days": {"type": "int"},
-      "total": {"type": "int"}
+      "days": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
-
   "language": "Язык",
   "settings": "Настройки",
   "systemDefault": "Язык системы",
-
   "aboutApp": "О приложении",
   "importantInfoHeader": "⚠️ ВАЖНАЯ ИНФОРМАЦИЯ",
   "disclaimerBody": "Это приложение НЕ является официальным государственным приложением и не связано с государственными органами. Это независимый, частный информационный ресурс. За юридически обязательной информацией обращайтесь напрямую в соответствующие органы.",
@@ -58,21 +60,26 @@
   "sourceOpenHolidaysLabel": "OpenHolidays API",
   "privacyPolicy": "Конфиденциальность",
   "close": "Закрыть",
-
   "yearOverview": "Обзор года",
   "notifications": "Уведомления",
-
   "dDayLabel": "D-{days}",
   "@dDayLabel": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowIsHoliday": "Завтра праздник",
   "daysRemaining": "Осталось {days} дней",
   "@daysRemaining": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowVacationStarts": "Завтра начинается отпуск",
-
   "onboardingHeadline": "1 день отпуска.\n4 дня выходных.",
   "onboardingSubtitle": "Найдите лучшие длинные выходные в вашей земле и максимально используйте отпуск.",
   "featureAllHolidays": "Все праздники с первого взгляда",
@@ -90,24 +97,29 @@
   "showSchoolHolidays": "Показывать школьные каникулы",
   "showSchoolHolidaysSubtitleShort": "Школьные каникулы вашей земли в календаре",
   "done": "Готово",
-
   "previousYear": "Предыдущий год",
   "nextYear": "Следующий год",
   "nationwide": "По всей стране",
   "regional": "Региональный",
   "additionalDaysOff": "Дополнительно выходной",
-
   "bridgeDaysWithYear": "Длинные выходные {year}",
   "@bridgeDaysWithYear": {
-    "placeholders": {"year": {"type": "int"}}
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
   },
   "daysCount": "{count} дней",
   "@daysCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "calendarExportFailed": "Не удалось открыть экспорт в календарь.",
   "addToCalendar": "Добавить в календарь",
-
   "notificationHeaderSubtitle": "Получайте своевременные напоминания об оптимальных днях отпуска",
   "notificationsNotSupported": "Уведомления не поддерживаются на этой платформе.",
   "bridgeDayNotifications": "Уведомления о длинных выходных",
@@ -117,7 +129,11 @@
   "remindBefore": "Напомнить за",
   "daysBefore": "за {days} дней",
   "@daysBefore": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "monthlySummary": "Ежемесячная сводка",
   "monthlySummarySubtitle": "Получать обзор праздников 1-го числа каждого месяца",
@@ -133,20 +149,21 @@
   "errorLoadingSettings": "Ошибка при загрузке настроек",
   "cancel": "Отмена",
   "ok": "OK",
-
   "selectState": "Выбрать землю",
   "selectYearAndMonth": "Выбрать год и месяц",
-
   "bridgeDayTips": "Советы по длинным выходным",
   "showAll": "Показать все",
   "vacationToDaysOff": "{vacationDays} → {totalDaysOff} дней",
   "@vacationToDaysOff": {
     "placeholders": {
-      "vacationDays": {"type": "int"},
-      "totalDaysOff": {"type": "int"}
+      "vacationDays": {
+        "type": "int"
+      },
+      "totalDaysOff": {
+        "type": "int"
+      }
     }
   },
-
   "vacationSettings": "Настройки отпуска",
   "annualVacationDays": "Годовой отпуск (дни)",
   "remainingVacationReminder": "Напоминание об остатке отпуска",
@@ -157,49 +174,69 @@
   "daysTakenOfTotal": "Использовано {used} из {total} дней",
   "@daysTakenOfTotal": {
     "placeholders": {
-      "used": {"type": "int"},
-      "total": {"type": "int"}
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "daysRemainingCount": "Осталось {count} дней",
   "@daysRemainingCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "bestVacationEfficiency": "Лучшая эффективность отпуска",
   "noBridgeDaysAvailable": "Длинные выходные недоступны",
   "oneVacationDayEquals": "1 день отпуска = {totalDaysOff} выходных дней",
   "@oneVacationDayEquals": {
-    "placeholders": {"totalDaysOff": {"type": "int"}}
+    "placeholders": {
+      "totalDaysOff": {
+        "type": "int"
+      }
+    }
   },
-
   "legalHoliday": "Официальный праздник",
   "noHoliday": "Не праздник",
   "durationDaysParen": "({count} дней)",
   "@durationDaysParen": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "addVacation": "Добавить отпуск",
   "moreHolidays": "Другие праздники",
   "addedToCalendar": "{name} добавляется в календарь",
   "@addedToCalendar": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "takeMondayOff": "Взять отпуск в понедельник",
   "takeFridayOff": "Взять отпуск в пятницу",
   "fourDaysOffPossible": "→ Возможны 4 выходных дня!",
   "bridgeDayTip": "Совет по длинным выходным",
-
   "calendarWeekNumber": "Нед.{week}",
   "@calendarWeekNumber": {
-    "placeholders": {"week": {"type": "int"}}
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
   },
   "labelOptional": "Название (необязательно)",
   "from": "С",
   "to": "По",
   "vacationDefaultTitle": "Отпуск",
-
   "adLabel": "Реклама",
-
   "monday": "Понедельник",
   "tuesday": "Вторник",
   "wednesday": "Среда",
@@ -207,17 +244,24 @@
   "friday": "Пятница",
   "saturday": "Суббота",
   "sunday": "Воскресенье",
-
   "notifHolidayInDaysTitle": "Следующий праздник через {days} дней!",
   "@notifHolidayInDaysTitle": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "notifPlanNowBody": "Спланируйте свои длинные выходные прямо сейчас и максимально используйте отпуск.",
   "notifRemainingBridgeTitle": "Осталось {count} длинных выходных в {year}",
   "@notifRemainingBridgeTitle": {
     "placeholders": {
-      "count": {"type": "int"},
-      "year": {"type": "int"}
+      "count": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
     }
   },
   "notifPlanBestBody": "Планируйте сейчас и получите максимум от своего отпуска!",
@@ -225,37 +269,68 @@
   "notifNextHolidayBody": "{date} — {name}. Откройте приложение для советов по длинным выходным!",
   "@notifNextHolidayBody": {
     "placeholders": {
-      "date": {"type": "String"},
-      "name": {"type": "String"}
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
     }
   },
   "notifHolidayIn7DaysTitle": "Через 7 дней: {name}",
   "@notifHolidayIn7DaysTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifTimeToPlanBody": "Ещё есть время спланировать! Посмотрите длинные выходные.",
   "notifHolidayTomorrowTitle": "Завтра: {name} 🎉",
   "@notifHolidayTomorrowTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifEnjoyDayOffBody": "Наслаждайтесь своим выходным!",
   "notifMonthlySummaryTitle": "{month}: {count, plural, one{{count} праздник} few{{count} праздника} many{{count} праздников} other{{count} праздника}}",
   "@notifMonthlySummaryTitle": {
     "placeholders": {
-      "month": {"type": "String"},
-      "count": {"type": "int"}
+      "month": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
     }
   },
   "notifMonthlySummaryBody": "Откройте приложение и найдите лучшие длинные выходные в {month}!",
   "@notifMonthlySummaryBody": {
-    "placeholders": {"month": {"type": "String"}}
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
   },
   "notifChannelName": "Напоминания о длинных выходных",
   "notifChannelDescription": "Напоминания для планирования отпуска на длинные выходные",
-
   "exportBridgeDaySummary": "Длинные выходные: {holidays}",
   "@exportBridgeDaySummary": {
-    "placeholders": {"holidays": {"type": "String"}}
+    "placeholders": {
+      "holidays": {
+        "type": "String"
+      }
+    }
   },
-  "exportBridgeDayTitle": "Отпуск (длинные выходные)"
+  "exportBridgeDayTitle": "Отпуск (длинные выходные)",
+  "removeAdsTitle": "Убрать рекламу",
+  "removeAdsSubtitle": "Заплатите один раз — навсегда без рекламы.",
+  "buyForPrice": "Купить за {price}",
+  "buyNow": "Купить",
+  "restorePurchases": "Восстановить покупки",
+  "premiumActiveTitle": "Режим без рекламы активен",
+  "premiumActiveSubtitle": "Спасибо за поддержку!",
+  "purchaseError": "Не удалось завершить покупку. Повторите попытку позже."
 }

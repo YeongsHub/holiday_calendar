@@ -557,4 +557,31 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get exportBridgeDayTitle => 'Отпуск (длинные выходные)';
+
+  @override
+  String get removeAdsTitle => 'Убрать рекламу';
+
+  @override
+  String get removeAdsSubtitle => 'Заплатите один раз — навсегда без рекламы.';
+
+  @override
+  String buyForPrice(String price) {
+    return 'Купить за $price';
+  }
+
+  @override
+  String get buyNow => 'Купить';
+
+  @override
+  String get restorePurchases => 'Восстановить покупки';
+
+  @override
+  String get premiumActiveTitle => 'Режим без рекламы активен';
+
+  @override
+  String get premiumActiveSubtitle => 'Спасибо за поддержку!';
+
+  @override
+  String get purchaseError =>
+      'Не удалось завершить покупку. Повторите попытку позже.';
 }

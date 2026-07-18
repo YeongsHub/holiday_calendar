@@ -38,15 +38,17 @@
   "bridgeDayLabel": "{days} Urlaubstage → {total} Tage frei",
   "@bridgeDayLabel": {
     "placeholders": {
-      "days": {"type": "int"},
-      "total": {"type": "int"}
+      "days": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
-
   "language": "Sprache",
   "settings": "Einstellungen",
   "systemDefault": "Systemsprache",
-
   "aboutApp": "Über diese App",
   "importantInfoHeader": "⚠️ WICHTIGE INFORMATIONEN",
   "disclaimerBody": "Diese App ist KEINE offizielle Regierungsanwendung und steht in keiner Verbindung zu staatlichen Stellen. Es handelt sich um ein unabhängiges, privates Informationsangebot. Für verbindliche Informationen wenden Sie sich bitte direkt an die zuständigen Behörden.",
@@ -58,21 +60,26 @@
   "sourceOpenHolidaysLabel": "OpenHolidays API",
   "privacyPolicy": "Datenschutz",
   "close": "Schließen",
-
   "yearOverview": "Jahresübersicht",
   "notifications": "Benachrichtigungen",
-
   "dDayLabel": "D-{days}",
   "@dDayLabel": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowIsHoliday": "Morgen ist Feiertag",
   "daysRemaining": "Noch {days} Tage",
   "@daysRemaining": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "tomorrowVacationStarts": "Morgen beginnt der Urlaub",
-
   "onboardingHeadline": "1 Tag Urlaub.\n4 Tage frei.",
   "onboardingSubtitle": "Finde die besten Brückentage in deinem Bundesland und maximiere deinen Urlaub.",
   "featureAllHolidays": "Alle Feiertage auf einen Blick",
@@ -90,24 +97,29 @@
   "showSchoolHolidays": "Schulferien anzeigen",
   "showSchoolHolidaysSubtitleShort": "Schulferien deines Bundeslandes im Kalender",
   "done": "Fertig",
-
   "previousYear": "Vorheriges Jahr",
   "nextYear": "Nächstes Jahr",
   "nationwide": "Bundesweit",
   "regional": "Regional",
   "additionalDaysOff": "Zusätzlich frei",
-
   "bridgeDaysWithYear": "Brückentage {year}",
   "@bridgeDaysWithYear": {
-    "placeholders": {"year": {"type": "int"}}
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
   },
   "daysCount": "{count} Tage",
   "@daysCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "calendarExportFailed": "Kalender-Export konnte nicht geöffnet werden.",
   "addToCalendar": "Zum Kalender hinzufügen",
-
   "notificationHeaderSubtitle": "Werde rechtzeitig an optimale Urlaubstage erinnert",
   "notificationsNotSupported": "Benachrichtigungen werden auf dieser Plattform nicht unterstützt.",
   "bridgeDayNotifications": "Brückentage Benachrichtigungen",
@@ -117,7 +129,11 @@
   "remindBefore": "Erinnerung vor",
   "daysBefore": "{days} Tage vorher",
   "@daysBefore": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "monthlySummary": "Monatliche Zusammenfassung",
   "monthlySummarySubtitle": "Am 1. jeden Monats eine Übersicht der Feiertage erhalten",
@@ -133,20 +149,21 @@
   "errorLoadingSettings": "Fehler beim Laden der Einstellungen",
   "cancel": "Abbrechen",
   "ok": "OK",
-
   "selectState": "Bundesland auswählen",
   "selectYearAndMonth": "Jahr und Monat auswählen",
-
   "bridgeDayTips": "Brückentage Tipps",
   "showAll": "Alle anzeigen",
   "vacationToDaysOff": "{vacationDays} → {totalDaysOff} Tage",
   "@vacationToDaysOff": {
     "placeholders": {
-      "vacationDays": {"type": "int"},
-      "totalDaysOff": {"type": "int"}
+      "vacationDays": {
+        "type": "int"
+      },
+      "totalDaysOff": {
+        "type": "int"
+      }
     }
   },
-
   "vacationSettings": "Urlaubseinstellungen",
   "annualVacationDays": "Jahresurlaub (Tage)",
   "remainingVacationReminder": "Resturlaub-Erinnerung",
@@ -157,49 +174,69 @@
   "daysTakenOfTotal": "{used} von {total} Tagen genommen",
   "@daysTakenOfTotal": {
     "placeholders": {
-      "used": {"type": "int"},
-      "total": {"type": "int"}
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
     }
   },
   "daysRemainingCount": "{count} Tage übrig",
   "@daysRemainingCount": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "bestVacationEfficiency": "Beste Urlaubseffizienz",
   "noBridgeDaysAvailable": "Keine Brückentage verfügbar",
   "oneVacationDayEquals": "1 Urlaubstag = {totalDaysOff} freie Tage",
   "@oneVacationDayEquals": {
-    "placeholders": {"totalDaysOff": {"type": "int"}}
+    "placeholders": {
+      "totalDaysOff": {
+        "type": "int"
+      }
+    }
   },
-
   "legalHoliday": "Gesetzlicher Feiertag",
   "noHoliday": "Kein Feiertag",
   "durationDaysParen": "({count} Tage)",
   "@durationDaysParen": {
-    "placeholders": {"count": {"type": "int"}}
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   },
   "addVacation": "Urlaub eintragen",
   "moreHolidays": "Weitere Feiertage",
   "addedToCalendar": "{name} wird zum Kalender hinzugefügt",
   "@addedToCalendar": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "takeMondayOff": "Montag Urlaub nehmen",
   "takeFridayOff": "Freitag Urlaub nehmen",
   "fourDaysOffPossible": "→ 4 Tage frei möglich!",
   "bridgeDayTip": "Brückentag Tipp",
-
   "calendarWeekNumber": "KW{week}",
   "@calendarWeekNumber": {
-    "placeholders": {"week": {"type": "int"}}
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
   },
   "labelOptional": "Bezeichnung (optional)",
   "from": "Von",
   "to": "Bis",
   "vacationDefaultTitle": "Urlaub",
-
   "adLabel": "Anzeige",
-
   "monday": "Montag",
   "tuesday": "Dienstag",
   "wednesday": "Mittwoch",
@@ -207,17 +244,24 @@
   "friday": "Freitag",
   "saturday": "Samstag",
   "sunday": "Sonntag",
-
   "notifHolidayInDaysTitle": "Nächster Feiertag in {days} Tagen!",
   "@notifHolidayInDaysTitle": {
-    "placeholders": {"days": {"type": "int"}}
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
   },
   "notifPlanNowBody": "Plane jetzt deine Brückentage und maximiere deinen Urlaub.",
   "notifRemainingBridgeTitle": "Noch {count} Brückentage in {year}",
   "@notifRemainingBridgeTitle": {
     "placeholders": {
-      "count": {"type": "int"},
-      "year": {"type": "int"}
+      "count": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
     }
   },
   "notifPlanBestBody": "Jetzt planen und das Beste aus deinem Urlaub herausholen!",
@@ -225,37 +269,75 @@
   "notifNextHolidayBody": "{date} — {name}. App öffnen für Brückentage-Tipps!",
   "@notifNextHolidayBody": {
     "placeholders": {
-      "date": {"type": "String"},
-      "name": {"type": "String"}
+      "date": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
     }
   },
   "notifHolidayIn7DaysTitle": "In 7 Tagen: {name}",
   "@notifHolidayIn7DaysTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifTimeToPlanBody": "Noch Zeit zum Planen! Schau dir die Brückentage an.",
   "notifHolidayTomorrowTitle": "Morgen: {name} 🎉",
   "@notifHolidayTomorrowTitle": {
-    "placeholders": {"name": {"type": "String"}}
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
   },
   "notifEnjoyDayOffBody": "Genieße deinen freien Tag!",
   "notifMonthlySummaryTitle": "{month}: {count, plural, one{{count} Feiertag} other{{count} Feiertage}}",
   "@notifMonthlySummaryTitle": {
     "placeholders": {
-      "month": {"type": "String"},
-      "count": {"type": "int"}
+      "month": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
     }
   },
   "notifMonthlySummaryBody": "Öffne die App und finde die besten Brückentage im {month}!",
   "@notifMonthlySummaryBody": {
-    "placeholders": {"month": {"type": "String"}}
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
   },
   "notifChannelName": "Brückentage Erinnerungen",
   "notifChannelDescription": "Erinnerungen für Brückentage Urlaubsplanung",
-
   "exportBridgeDaySummary": "Brückentage: {holidays}",
   "@exportBridgeDaySummary": {
-    "placeholders": {"holidays": {"type": "String"}}
+    "placeholders": {
+      "holidays": {
+        "type": "String"
+      }
+    }
   },
-  "exportBridgeDayTitle": "Urlaub (Brückentag)"
+  "exportBridgeDayTitle": "Urlaub (Brückentag)",
+  "removeAdsTitle": "Werbung entfernen",
+  "removeAdsSubtitle": "Einmalig zahlen, für immer werbefrei.",
+  "buyForPrice": "Für {price} kaufen",
+  "buyNow": "Jetzt kaufen",
+  "restorePurchases": "Käufe wiederherstellen",
+  "premiumActiveTitle": "Werbefrei aktiv",
+  "premiumActiveSubtitle": "Danke für deine Unterstützung!",
+  "purchaseError": "Kauf konnte nicht abgeschlossen werden. Bitte später erneut versuchen.",
+  "@buyForPrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  }
 }

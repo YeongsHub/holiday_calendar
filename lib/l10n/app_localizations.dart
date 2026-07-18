@@ -1063,6 +1063,54 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Urlaub (Brückentag)'**
   String get exportBridgeDayTitle;
+
+  /// No description provided for @removeAdsTitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Werbung entfernen'**
+  String get removeAdsTitle;
+
+  /// No description provided for @removeAdsSubtitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Einmalig zahlen, für immer werbefrei.'**
+  String get removeAdsSubtitle;
+
+  /// No description provided for @buyForPrice.
+  ///
+  /// In de, this message translates to:
+  /// **'Für {price} kaufen'**
+  String buyForPrice(String price);
+
+  /// No description provided for @buyNow.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt kaufen'**
+  String get buyNow;
+
+  /// No description provided for @restorePurchases.
+  ///
+  /// In de, this message translates to:
+  /// **'Käufe wiederherstellen'**
+  String get restorePurchases;
+
+  /// No description provided for @premiumActiveTitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Werbefrei aktiv'**
+  String get premiumActiveTitle;
+
+  /// No description provided for @premiumActiveSubtitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke für deine Unterstützung!'**
+  String get premiumActiveSubtitle;
+
+  /// No description provided for @purchaseError.
+  ///
+  /// In de, this message translates to:
+  /// **'Kauf konnte nicht abgeschlossen werden. Bitte später erneut versuchen.'**
+  String get purchaseError;
 }
 
 class _AppLocalizationsDelegate

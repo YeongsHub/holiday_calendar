@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:holiday_calendar/core/services/analytics_service.dart';
 import 'package:holiday_calendar/core/services/notification_service.dart';
+import 'package:holiday_calendar/core/services/purchase_service.dart';
 import 'package:holiday_calendar/core/theme/app_theme.dart';
 import 'package:holiday_calendar/l10n/app_localizations.dart';
 import 'package:holiday_calendar/presentation/providers/locale_provider.dart';
@@ -17,6 +18,10 @@ class HolidayCalendarApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // null → follow the system language; a value forces that language.
     final locale = ref.watch(appLocaleProvider);
+
+    // Subscribe to the Play Billing purchase stream once for the app's
+    // lifetime (delivers pending purchases, restores, and refunds).
+    ref.watch(purchaseServiceInitProvider);
 
     return MaterialApp(
       // Title is localized via onGenerateTitle so it follows the app locale.

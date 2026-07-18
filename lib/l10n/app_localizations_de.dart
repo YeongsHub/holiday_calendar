@@ -556,4 +556,31 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get exportBridgeDayTitle => 'Urlaub (Brückentag)';
+
+  @override
+  String get removeAdsTitle => 'Werbung entfernen';
+
+  @override
+  String get removeAdsSubtitle => 'Einmalig zahlen, für immer werbefrei.';
+
+  @override
+  String buyForPrice(String price) {
+    return 'Für $price kaufen';
+  }
+
+  @override
+  String get buyNow => 'Jetzt kaufen';
+
+  @override
+  String get restorePurchases => 'Käufe wiederherstellen';
+
+  @override
+  String get premiumActiveTitle => 'Werbefrei aktiv';
+
+  @override
+  String get premiumActiveSubtitle => 'Danke für deine Unterstützung!';
+
+  @override
+  String get purchaseError =>
+      'Kauf konnte nicht abgeschlossen werden. Bitte später erneut versuchen.';
 }
