@@ -6,19 +6,19 @@ class ApiConstants {
   static const String countryCode = 'DE';
   static const String languageCode = 'DE';
 
-  /// Get public holidays endpoint
-  /// Returns holidays for a specific year in Germany
-  static String publicHolidaysEndpoint(int year) =>
-      '/PublicHolidays?countryIsoCode=$countryCode&languageIsoCode=$languageCode&validFrom=$year-01-01&validTo=$year-12-31';
+  /// Get public holidays endpoint for a specific year and country (DE/AT/CH)
+  static String publicHolidaysEndpoint(int year,
+          {String country = countryCode}) =>
+      '/PublicHolidays?countryIsoCode=$country&languageIsoCode=$languageCode&validFrom=$year-01-01&validTo=$year-12-31';
 
-  /// Get school holidays endpoint
-  /// Returns school holidays for a specific year and subdivision in Germany
-  static String schoolHolidaysEndpoint(int year, String subdivisionCode) =>
-      '/SchoolHolidays?countryIsoCode=$countryCode&languageIsoCode=$languageCode&validFrom=$year-01-01&validTo=$year-12-31&subdivisionCode=$subdivisionCode';
+  /// Get school holidays endpoint for a specific year, subdivision and country
+  static String schoolHolidaysEndpoint(int year, String subdivisionCode,
+          {String country = countryCode}) =>
+      '/SchoolHolidays?countryIsoCode=$country&languageIsoCode=$languageCode&validFrom=$year-01-01&validTo=$year-12-31&subdivisionCode=$subdivisionCode';
 
-  /// Get subdivisions (federal states) endpoint
-  static String subdivisionsEndpoint() =>
-      '/Subdivisions?countryIsoCode=$countryCode';
+  /// Get subdivisions (federal states / cantons) endpoint
+  static String subdivisionsEndpoint({String country = countryCode}) =>
+      '/Subdivisions?countryIsoCode=$country';
 
   static const Duration connectTimeout = Duration(seconds: 10);
   static const Duration receiveTimeout = Duration(seconds: 10);

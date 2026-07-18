@@ -332,5 +332,11 @@
   "restorePurchases": "استعادة المشتريات",
   "premiumActiveTitle": "وضع بدون إعلانات مفعّل",
   "premiumActiveSubtitle": "شكرًا لدعمك!",
-  "purchaseError": "تعذّر إتمام الشراء. يُرجى المحاولة لاحقًا."
+  "purchaseError": "تعذّر إتمام الشراء. يُرجى المحاولة لاحقًا.",
+  "country": "الدولة",
+  "countryGermany": "ألمانيا",
+  "countryAustria": "النمسا",
+  "countrySwitzerland": "سويسرا",
+  "allCantons": "جميع الكانتونات",
+  "yourCanton": "الكانتون الخاص بك"
 }

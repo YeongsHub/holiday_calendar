@@ -25,7 +25,8 @@ class MockHolidayRepository implements HolidayRepository {
   }
 
   @override
-  Future<Either<Failure, List<Holiday>>> getHolidays(int year) async {
+  Future<Either<Failure, List<Holiday>>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     getHolidaysCallCount++;
     lastRequestedYear = year;
 
@@ -40,7 +41,8 @@ class MockHolidayRepository implements HolidayRepository {
 /// Mock repository that simulates network error
 class NetworkErrorRepository implements HolidayRepository {
   @override
-  Future<Either<Failure, List<Holiday>>> getHolidays(int year) async {
+  Future<Either<Failure, List<Holiday>>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     return const Left(
       Failure.network(message: 'No internet connection'),
     );
@@ -50,7 +52,8 @@ class NetworkErrorRepository implements HolidayRepository {
 /// Mock repository that simulates server error
 class ServerErrorRepository implements HolidayRepository {
   @override
-  Future<Either<Failure, List<Holiday>>> getHolidays(int year) async {
+  Future<Either<Failure, List<Holiday>>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     return const Left(
       Failure.server(message: 'Internal Server Error', statusCode: 500),
     );
@@ -68,7 +71,8 @@ class SlowRepository implements HolidayRepository {
   });
 
   @override
-  Future<Either<Failure, List<Holiday>>> getHolidays(int year) async {
+  Future<Either<Failure, List<Holiday>>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     await Future.delayed(delay);
     return Right(holidays);
   }

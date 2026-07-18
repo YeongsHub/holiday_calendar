@@ -54,8 +54,12 @@ class SchoolHolidayNotifier extends _$SchoolHolidayNotifier {
     try {
       final remoteDataSource =
           HolidayRemoteDataSourceImpl(dio: ref.watch(dioProvider));
-      final models =
-          await remoteDataSource.getSchoolHolidays(year, selectedState.code);
+      // Derive the country from the subdivision code (e.g. "AT-WI" → "AT")
+      // so school holidays follow the selected state's country.
+      final countryCode = selectedState.code.split('-').first;
+      final models = await remoteDataSource.getSchoolHolidays(
+          year, selectedState.code,
+          countryCode: countryCode);
 
       final entities = models.map((m) {
         final localName = m.name

@@ -12,10 +12,12 @@ class HolidayNotifier extends _$HolidayNotifier {
   @override
   Future<List<Holiday>> build() async {
     final year = ref.watch(selectedYearProvider);
+    final country = ref.watch(selectedCountryProvider);
     final selectedState = ref.watch(selectedFederalStateProvider);
 
     final repository = ref.watch(holidayRepositoryProvider);
-    final result = await repository.getHolidays(year);
+    final result =
+        await repository.getHolidays(year, countryCode: country.isoCode);
 
     return result.fold(
       (failure) => throw Exception(failure.when(

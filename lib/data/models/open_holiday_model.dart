@@ -24,7 +24,7 @@ class OpenHolidayModel with _$OpenHolidayModel {
       _$OpenHolidayModelFromJson(json);
 
   /// Convert to domain entity
-  Holiday toEntity() {
+  Holiday toEntity({String countryCode = 'DE'}) {
     // Get German name or fall back to first available
     final localName = name.firstWhere(
       (n) => n.language == 'DE',
@@ -44,7 +44,7 @@ class OpenHolidayModel with _$OpenHolidayModel {
       date: DateTime.parse(startDate),
       localName: localName,
       name: englishName,
-      countryCode: 'DE',
+      countryCode: countryCode,
       fixed: type == 'Public',
       global: nationwide,
       counties: counties,

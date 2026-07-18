@@ -332,5 +332,11 @@
   "restorePurchases": "Satın alımları geri yükle",
   "premiumActiveTitle": "Reklamsız mod etkin",
   "premiumActiveSubtitle": "Desteğiniz için teşekkürler!",
-  "purchaseError": "Satın alma tamamlanamadı. Lütfen daha sonra tekrar deneyin."
+  "purchaseError": "Satın alma tamamlanamadı. Lütfen daha sonra tekrar deneyin.",
+  "country": "Ülke",
+  "countryGermany": "Almanya",
+  "countryAustria": "Avusturya",
+  "countrySwitzerland": "İsviçre",
+  "allCantons": "Tüm kantonlar",
+  "yourCanton": "Kantonunuz"
 }

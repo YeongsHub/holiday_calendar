@@ -27,7 +27,8 @@ class MockRemoteDataSource implements HolidayRemoteDataSource {
   }
 
   @override
-  Future<List<OpenHolidayModel>> getHolidays(int year) async {
+  Future<List<OpenHolidayModel>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     callCount++;
     if (_exception != null) throw _exception!;
     return _result ?? [];
@@ -35,7 +36,8 @@ class MockRemoteDataSource implements HolidayRemoteDataSource {
 
   @override
   Future<List<OpenHolidayModel>> getSchoolHolidays(
-      int year, String subdivisionCode) async {
+      int year, String subdivisionCode,
+      {String countryCode = 'DE'}) async {
     return [];
   }
 }
@@ -59,20 +61,21 @@ class MockLocalDataSource implements HolidayLocalDataSource {
   }
 
   @override
-  Future<List<Holiday>> getHolidays(int year) async {
+  Future<List<Holiday>> getHolidays(int year, {String countryCode = 'DE'}) async {
     if (_throwOnAccess) throw const CacheException(message: 'DB corrupted');
     return _cachedHolidays;
   }
 
   @override
-  Future<void> cacheHolidays(int year, List<Holiday> holidays) async {
+  Future<void> cacheHolidays(int year, List<Holiday> holidays,
+      {String countryCode = 'DE'}) async {
     if (_throwOnAccess) throw const CacheException(message: 'DB write failed');
     _cachedHolidays = holidays;
     cacheHolidaysCallCount++;
   }
 
   @override
-  Future<bool> isCacheValid(int year) async {
+  Future<bool> isCacheValid(int year, {String countryCode = 'DE'}) async {
     if (_throwOnAccess) throw const CacheException(message: 'DB read failed');
     return _cacheValid;
   }

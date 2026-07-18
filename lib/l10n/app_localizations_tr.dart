@@ -581,4 +581,22 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get purchaseError =>
       'Satın alma tamamlanamadı. Lütfen daha sonra tekrar deneyin.';
+
+  @override
+  String get country => 'Ülke';
+
+  @override
+  String get countryGermany => 'Almanya';
+
+  @override
+  String get countryAustria => 'Avusturya';
+
+  @override
+  String get countrySwitzerland => 'İsviçre';
+
+  @override
+  String get allCantons => 'Tüm kantonlar';
+
+  @override
+  String get yourCanton => 'Kantonunuz';
 }

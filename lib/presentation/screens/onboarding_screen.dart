@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:holiday_calendar/core/services/analytics_service.dart';
 import 'package:holiday_calendar/core/services/notification_service.dart';
+import 'package:holiday_calendar/domain/entities/app_country.dart';
 import 'package:holiday_calendar/domain/entities/federal_state.dart';
 import 'package:holiday_calendar/domain/entities/holiday.dart';
 import 'package:holiday_calendar/l10n/app_localizations.dart';
@@ -39,6 +40,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   int _currentPage = 0;
 
   // Screen 2 state
+  AppCountry _selectedCountry = AppCountry.de;
   FederalState? _selectedState;
 
   // Screen 3 state
@@ -96,6 +98,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   Future<void> _completeOnboarding() async {
+    // Save country first — selecting a country clears a mismatched state,
+    // so the state selection below must come after.
+    await ref.read(selectedCountryProvider.notifier).select(_selectedCountry);
+
     // Save federal state selection
     if (_selectedState != null) {
       ref.read(selectedFederalStateProvider.notifier).select(_selectedState);
@@ -193,6 +199,13 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                 children: [
                   _ValuePropositionPage(onNext: _nextPage),
                   _StateSelectionPage(
+                    selectedCountry: _selectedCountry,
+                    onCountrySelected: (country) {
+                      setState(() {
+                        _selectedCountry = country;
+                        _selectedState = null;
+                      });
+                    },
                     selectedState: _selectedState,
                     onStateSelected: (state) {
                       setState(() => _selectedState = state);
@@ -321,11 +334,15 @@ class _FeatureRow extends StatelessWidget {
 // --- Screen 2: Federal State Selection ---
 
 class _StateSelectionPage extends StatelessWidget {
+  final AppCountry selectedCountry;
+  final ValueChanged<AppCountry> onCountrySelected;
   final FederalState? selectedState;
   final ValueChanged<FederalState?> onStateSelected;
   final VoidCallback onNext;
 
   const _StateSelectionPage({
+    required this.selectedCountry,
+    required this.onCountrySelected,
     required this.selectedState,
     required this.onStateSelected,
     required this.onNext,
@@ -335,7 +352,7 @@ class _StateSelectionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
-    final states = FederalState.all;
+    final states = FederalState.forCountry(selectedCountry);
 
     return Column(
       children: [
@@ -350,7 +367,7 @@ class _StateSelectionPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                l10n.yourState,
+                selectedCountry.usesCantons ? l10n.yourCanton : l10n.yourState,
                 style: theme.textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -362,6 +379,26 @@ class _StateSelectionPage extends StatelessWidget {
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,
                 ),
+              ),
+              const SizedBox(height: 16),
+              SegmentedButton<AppCountry>(
+                segments: const [
+                  ButtonSegment(
+                    value: AppCountry.de,
+                    label: Text('🇩🇪 DE'),
+                  ),
+                  ButtonSegment(
+                    value: AppCountry.at,
+                    label: Text('🇦🇹 AT'),
+                  ),
+                  ButtonSegment(
+                    value: AppCountry.ch,
+                    label: Text('🇨🇭 CH'),
+                  ),
+                ],
+                selected: {selectedCountry},
+                onSelectionChanged: (selection) =>
+                    onCountrySelected(selection.first),
               ),
             ],
           ),

@@ -46,7 +46,7 @@ final showSchoolHolidaysProvider =
 
 typedef _$ShowSchoolHolidays = AutoDisposeNotifier<bool>;
 String _$schoolHolidayNotifierHash() =>
-    r'047cb5af5e8afa809366ad172bd382bab8a0df7f';
+    r'1fffa7af484f1086092e1382df4b2b1e84344e7e';
 
 /// See also [SchoolHolidayNotifier].
 @ProviderFor(SchoolHolidayNotifier)

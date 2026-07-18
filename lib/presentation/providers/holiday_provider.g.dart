@@ -25,7 +25,7 @@ final holidaysByDateProvider =
 // ignore: unused_element
 typedef HolidaysByDateRef =
     AutoDisposeProviderRef<Map<DateTime, List<Holiday>>>;
-String _$holidayNotifierHash() => r'0e4c546da1df20bc1c02edda6d9f51a13fb44d1a';
+String _$holidayNotifierHash() => r'2a4a5f1a3b207a1c306f4b48c84534532db9775b';
 
 /// See also [HolidayNotifier].
 @ProviderFor(HolidayNotifier)

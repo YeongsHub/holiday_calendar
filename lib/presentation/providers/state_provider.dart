@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:holiday_calendar/domain/entities/app_country.dart';
 import 'package:holiday_calendar/domain/entities/federal_state.dart';
 import 'package:holiday_calendar/presentation/providers/db_vacation_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -7,6 +8,39 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'state_provider.g.dart';
 
 const String _selectedStateKey = 'selected_federal_state_code';
+const String _selectedCountryKey = 'selected_country_iso_code';
+
+@riverpod
+class SelectedCountry extends _$SelectedCountry {
+  @override
+  AppCountry build() {
+    _loadSavedCountry();
+    return AppCountry.de;
+  }
+
+  Future<void> _loadSavedCountry() async {
+    final prefs = await SharedPreferences.getInstance();
+    final code = prefs.getString(_selectedCountryKey);
+    if (code != null) {
+      state = AppCountry.fromIsoCode(code);
+    }
+  }
+
+  Future<void> select(AppCountry country) async {
+    if (state == country) return;
+    state = country;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_selectedCountryKey, country.isoCode);
+
+    // A Bundesland/canton from the previous country makes no sense for the
+    // new one — reset the subdivision filter.
+    final selectedState = ref.read(selectedFederalStateProvider);
+    if (selectedState != null &&
+        !selectedState.code.startsWith('${country.isoCode}-')) {
+      await ref.read(selectedFederalStateProvider.notifier).clear();
+    }
+  }
+}
 
 @riverpod
 class SelectedFederalState extends _$SelectedFederalState {
@@ -20,7 +54,7 @@ class SelectedFederalState extends _$SelectedFederalState {
     final prefs = await SharedPreferences.getInstance();
     final code = prefs.getString(_selectedStateKey);
     if (code != null) {
-      final saved = FederalState.all.where((s) => s.code == code).firstOrNull;
+      final saved = FederalState.byCode(code);
       if (saved != null) {
         state = saved;
       }
@@ -46,7 +80,8 @@ class SelectedFederalState extends _$SelectedFederalState {
 
 @riverpod
 List<FederalState> federalStates(Ref ref) {
-  return FederalState.all;
+  final country = ref.watch(selectedCountryProvider);
+  return FederalState.forCountry(country);
 }
 
 // Annual vacation days provider (persisted via SharedPreferences)

@@ -42,6 +42,8 @@ class Holiday with _$Holiday {
     // we don't know which states it applies to - don't show it
     if (counties == null || counties!.isEmpty) return false;
 
-    return counties!.contains(stateCode);
+    // Prefix match: Swiss holidays can list sub-canton districts
+    // (e.g. "CH-FR-LA-RI"), which still belong to the canton "CH-FR".
+    return counties!.any((c) => c == stateCode || c.startsWith('$stateCode-'));
   }
 }

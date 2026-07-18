@@ -4,9 +4,10 @@ import 'package:holiday_calendar/domain/entities/holiday.dart';
 import 'package:drift/drift.dart';
 
 abstract class HolidayLocalDataSource {
-  Future<List<Holiday>> getHolidays(int year);
-  Future<void> cacheHolidays(int year, List<Holiday> holidays);
-  Future<bool> isCacheValid(int year);
+  Future<List<Holiday>> getHolidays(int year, {String countryCode = 'DE'});
+  Future<void> cacheHolidays(int year, List<Holiday> holidays,
+      {String countryCode = 'DE'});
+  Future<bool> isCacheValid(int year, {String countryCode = 'DE'});
   Future<void> clearCache();
 }
 
@@ -16,15 +17,17 @@ class HolidayLocalDataSourceImpl implements HolidayLocalDataSource {
   HolidayLocalDataSourceImpl({required this.database});
 
   @override
-  Future<List<Holiday>> getHolidays(int year) async {
-    final rows = await database.getHolidaysByYear(year);
+  Future<List<Holiday>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
+    final rows = await database.getHolidaysByYearAndCountry(year, countryCode);
     return rows.map(_mapRowToEntity).toList();
   }
 
   @override
-  Future<void> cacheHolidays(int year, List<Holiday> holidays) async {
-    // Delete old cache for this year
-    await database.deleteHolidaysByYear(year);
+  Future<void> cacheHolidays(int year, List<Holiday> holidays,
+      {String countryCode = 'DE'}) async {
+    // Delete old cache for this year and country
+    await database.deleteHolidaysByYearAndCountry(year, countryCode);
 
     // Insert new holidays
     final companions = holidays.map((h) => _mapEntityToCompanion(h, year)).toList();
@@ -32,9 +35,9 @@ class HolidayLocalDataSourceImpl implements HolidayLocalDataSource {
   }
 
   @override
-  Future<bool> isCacheValid(int year) async {
+  Future<bool> isCacheValid(int year, {String countryCode = 'DE'}) async {
     final result = await (database.select(database.holidayTable)
-          ..where((h) => h.year.equals(year))
+          ..where((h) => h.year.equals(year) & h.countryCode.equals(countryCode))
           ..limit(1))
         .getSingleOrNull();
 
@@ -64,7 +67,10 @@ class HolidayLocalDataSourceImpl implements HolidayLocalDataSource {
 
   HolidayTableCompanion _mapEntityToCompanion(Holiday holiday, int year) {
     return HolidayTableCompanion(
-      apiId: Value('${holiday.date.toIso8601String()}_${holiday.localName}'),
+      // Country prefix keeps same-day, same-name holidays (e.g. Neujahr in
+      // DE and AT) from colliding on the primary key.
+      apiId: Value(
+          '${holiday.countryCode}_${holiday.date.toIso8601String()}_${holiday.localName}'),
       date: Value(holiday.date),
       localName: Value(holiday.localName),
       name: Value(holiday.name),

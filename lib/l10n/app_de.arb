@@ -339,5 +339,11 @@
         "type": "String"
       }
     }
-  }
+  },
+  "country": "Land",
+  "countryGermany": "Deutschland",
+  "countryAustria": "Österreich",
+  "countrySwitzerland": "Schweiz",
+  "allCantons": "Alle Kantone",
+  "yourCanton": "Dein Kanton"
 }

@@ -332,5 +332,11 @@
   "restorePurchases": "Restore purchases",
   "premiumActiveTitle": "Ad-free active",
   "premiumActiveSubtitle": "Thank you for your support!",
-  "purchaseError": "Purchase could not be completed. Please try again later."
+  "purchaseError": "Purchase could not be completed. Please try again later.",
+  "country": "Country",
+  "countryGermany": "Germany",
+  "countryAustria": "Austria",
+  "countrySwitzerland": "Switzerland",
+  "allCantons": "All cantons",
+  "yourCanton": "Your canton"
 }

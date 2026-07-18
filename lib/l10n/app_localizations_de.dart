@@ -583,4 +583,22 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get purchaseError =>
       'Kauf konnte nicht abgeschlossen werden. Bitte später erneut versuchen.';
+
+  @override
+  String get country => 'Land';
+
+  @override
+  String get countryGermany => 'Deutschland';
+
+  @override
+  String get countryAustria => 'Österreich';
+
+  @override
+  String get countrySwitzerland => 'Schweiz';
+
+  @override
+  String get allCantons => 'Alle Kantone';
+
+  @override
+  String get yourCanton => 'Dein Kanton';
 }

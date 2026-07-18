@@ -4,8 +4,11 @@ import 'package:holiday_calendar/core/error/exceptions.dart';
 import 'package:holiday_calendar/data/models/open_holiday_model.dart';
 
 abstract class HolidayRemoteDataSource {
-  Future<List<OpenHolidayModel>> getHolidays(int year);
-  Future<List<OpenHolidayModel>> getSchoolHolidays(int year, String subdivisionCode);
+  Future<List<OpenHolidayModel>> getHolidays(int year,
+      {String countryCode = 'DE'});
+  Future<List<OpenHolidayModel>> getSchoolHolidays(
+      int year, String subdivisionCode,
+      {String countryCode = 'DE'});
 }
 
 class HolidayRemoteDataSourceImpl implements HolidayRemoteDataSource {
@@ -14,10 +17,11 @@ class HolidayRemoteDataSourceImpl implements HolidayRemoteDataSource {
   HolidayRemoteDataSourceImpl({required this.dio});
 
   @override
-  Future<List<OpenHolidayModel>> getHolidays(int year) async {
+  Future<List<OpenHolidayModel>> getHolidays(int year,
+      {String countryCode = 'DE'}) async {
     try {
       final response = await dio.get(
-        ApiConstants.publicHolidaysEndpoint(year),
+        ApiConstants.publicHolidaysEndpoint(year, country: countryCode),
       );
 
       if (response.statusCode == 200) {
@@ -43,10 +47,12 @@ class HolidayRemoteDataSourceImpl implements HolidayRemoteDataSource {
 
   @override
   Future<List<OpenHolidayModel>> getSchoolHolidays(
-      int year, String subdivisionCode) async {
+      int year, String subdivisionCode,
+      {String countryCode = 'DE'}) async {
     try {
       final response = await dio.get(
-        ApiConstants.schoolHolidaysEndpoint(year, subdivisionCode),
+        ApiConstants.schoolHolidaysEndpoint(year, subdivisionCode,
+            country: countryCode),
       );
 
       if (response.statusCode == 200) {

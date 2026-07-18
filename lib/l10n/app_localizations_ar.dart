@@ -584,4 +584,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get purchaseError => 'تعذّر إتمام الشراء. يُرجى المحاولة لاحقًا.';
+
+  @override
+  String get country => 'الدولة';
+
+  @override
+  String get countryGermany => 'ألمانيا';
+
+  @override
+  String get countryAustria => 'النمسا';
+
+  @override
+  String get countrySwitzerland => 'سويسرا';
+
+  @override
+  String get allCantons => 'جميع الكانتونات';
+
+  @override
+  String get yourCanton => 'الكانتون الخاص بك';
 }

@@ -332,5 +332,11 @@
   "restorePurchases": "Восстановить покупки",
   "premiumActiveTitle": "Режим без рекламы активен",
   "premiumActiveSubtitle": "Спасибо за поддержку!",
-  "purchaseError": "Не удалось завершить покупку. Повторите попытку позже."
+  "purchaseError": "Не удалось завершить покупку. Повторите попытку позже.",
+  "country": "Страна",
+  "countryGermany": "Германия",
+  "countryAustria": "Австрия",
+  "countrySwitzerland": "Швейцария",
+  "allCantons": "Все кантоны",
+  "yourCanton": "Ваш кантон"
 }

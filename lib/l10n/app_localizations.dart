@@ -1111,6 +1111,42 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Kauf konnte nicht abgeschlossen werden. Bitte später erneut versuchen.'**
   String get purchaseError;
+
+  /// No description provided for @country.
+  ///
+  /// In de, this message translates to:
+  /// **'Land'**
+  String get country;
+
+  /// No description provided for @countryGermany.
+  ///
+  /// In de, this message translates to:
+  /// **'Deutschland'**
+  String get countryGermany;
+
+  /// No description provided for @countryAustria.
+  ///
+  /// In de, this message translates to:
+  /// **'Österreich'**
+  String get countryAustria;
+
+  /// No description provided for @countrySwitzerland.
+  ///
+  /// In de, this message translates to:
+  /// **'Schweiz'**
+  String get countrySwitzerland;
+
+  /// No description provided for @allCantons.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle Kantone'**
+  String get allCantons;
+
+  /// No description provided for @yourCanton.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Kanton'**
+  String get yourCanton;
 }
 
 class _AppLocalizationsDelegate

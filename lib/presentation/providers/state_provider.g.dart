@@ -6,7 +6,7 @@ part of 'state_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$federalStatesHash() => r'6a0808f8754ae65ffc7a70364d4edabdd0413fdc';
+String _$federalStatesHash() => r'dc65b5905cf2b644e58a7180bf1b3b64a3144f0d';
 
 /// See also [federalStates].
 @ProviderFor(federalStates)
@@ -60,8 +60,24 @@ final remainingVacationDaysProvider = AutoDisposeProvider<int>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef RemainingVacationDaysRef = AutoDisposeProviderRef<int>;
+String _$selectedCountryHash() => r'81fb64750a792b0ed83fff180b519f021b90d901';
+
+/// See also [SelectedCountry].
+@ProviderFor(SelectedCountry)
+final selectedCountryProvider =
+    AutoDisposeNotifierProvider<SelectedCountry, AppCountry>.internal(
+      SelectedCountry.new,
+      name: r'selectedCountryProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$selectedCountryHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
+
+typedef _$SelectedCountry = AutoDisposeNotifier<AppCountry>;
 String _$selectedFederalStateHash() =>
-    r'0ac956625792b12fb4f7d73c15930ec53949fdd8';
+    r'eeac626089ff53da2be79be5f5e6c45b3108d5fd';
 
 /// See also [SelectedFederalState].
 @ProviderFor(SelectedFederalState)

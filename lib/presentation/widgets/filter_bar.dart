@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:holiday_calendar/core/services/analytics_service.dart';
+import 'package:holiday_calendar/domain/entities/app_country.dart';
 import 'package:holiday_calendar/domain/entities/federal_state.dart';
 import 'package:holiday_calendar/l10n/app_localizations.dart';
 import 'package:holiday_calendar/presentation/providers/month_provider.dart';
@@ -17,14 +18,77 @@ class FilterBar extends ConsumerWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
+          _CountryButton(),
+          const SizedBox(width: 8),
           Expanded(
             child: _StateDropdown(),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 8),
           Expanded(
             child: _YearMonthPicker(),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Compact country switcher (DE / AT / CH) shown as the current flag.
+class _CountryButton extends ConsumerWidget {
+  String _countryName(AppLocalizations l10n, AppCountry country) {
+    switch (country) {
+      case AppCountry.de:
+        return l10n.countryGermany;
+      case AppCountry.at:
+        return l10n.countryAustria;
+      case AppCountry.ch:
+        return l10n.countrySwitzerland;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final country = ref.watch(selectedCountryProvider);
+    final theme = Theme.of(context);
+
+    return PopupMenuButton<AppCountry>(
+      tooltip: l10n.country,
+      initialValue: country,
+      onSelected: (c) {
+        ref.read(selectedCountryProvider.notifier).select(c);
+        AnalyticsService().logBundeslandSelected(c.isoCode);
+      },
+      itemBuilder: (context) => AppCountry.values
+          .map(
+            (c) => PopupMenuItem(
+              value: c,
+              child: Row(
+                children: [
+                  Text(c.flag, style: const TextStyle(fontSize: 20)),
+                  const SizedBox(width: 12),
+                  Text(_countryName(l10n, c)),
+                ],
+              ),
+            ),
+          )
+          .toList(),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+        decoration: BoxDecoration(
+          border: Border.all(color: theme.colorScheme.outline),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(country.flag, style: const TextStyle(fontSize: 18)),
+            Icon(
+              Icons.arrow_drop_down,
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -36,7 +100,10 @@ class _StateDropdown extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
     final selectedState = ref.watch(selectedFederalStateProvider);
     final states = ref.watch(federalStatesProvider);
+    final country = ref.watch(selectedCountryProvider);
     final theme = Theme.of(context);
+
+    final allLabel = country.usesCantons ? l10n.allCantons : l10n.allStates;
 
     return InkWell(
       onTap: () => _showStatePicker(context, ref, states, selectedState),
@@ -51,7 +118,7 @@ class _StateDropdown extends ConsumerWidget {
           children: [
             Expanded(
               child: Text(
-                selectedState?.nameDE ?? l10n.allStates,
+                selectedState?.nameDE ?? allLabel,
                 style: theme.textTheme.bodyLarge,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -76,6 +143,8 @@ class _StateDropdown extends ConsumerWidget {
       context: context,
       builder: (context) {
         final l10n = AppLocalizations.of(context)!;
+        final country = ref.read(selectedCountryProvider);
+        final allLabel = country.usesCantons ? l10n.allCantons : l10n.allStates;
         return SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -93,7 +162,7 @@ class _StateDropdown extends ConsumerWidget {
                 shrinkWrap: true,
                 children: [
                   ListTile(
-                    title: Text(l10n.allStates),
+                    title: Text(allLabel),
                     leading: Icon(
                       selectedState == null
                           ? Icons.radio_button_checked

@@ -584,4 +584,22 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get purchaseError =>
       'Не удалось завершить покупку. Повторите попытку позже.';
+
+  @override
+  String get country => 'Страна';
+
+  @override
+  String get countryGermany => 'Германия';
+
+  @override
+  String get countryAustria => 'Австрия';
+
+  @override
+  String get countrySwitzerland => 'Швейцария';
+
+  @override
+  String get allCantons => 'Все кантоны';
+
+  @override
+  String get yourCanton => 'Ваш кантон';
 }

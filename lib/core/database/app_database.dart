@@ -72,9 +72,24 @@ class AppDatabase extends _$AppDatabase {
     return (select(holidayTable)..where((h) => h.year.equals(year))).get();
   }
 
+  // 특정 연도+국가의 공휴일 조회
+  Future<List<HolidayTableData>> getHolidaysByYearAndCountry(
+      int year, String countryCode) {
+    return (select(holidayTable)
+          ..where((h) => h.year.equals(year) & h.countryCode.equals(countryCode)))
+        .get();
+  }
+
   // 특정 연도의 공휴일 삭제
   Future<int> deleteHolidaysByYear(int year) {
     return (delete(holidayTable)..where((h) => h.year.equals(year))).go();
+  }
+
+  // 특정 연도+국가의 공휴일 삭제
+  Future<int> deleteHolidaysByYearAndCountry(int year, String countryCode) {
+    return (delete(holidayTable)
+          ..where((h) => h.year.equals(year) & h.countryCode.equals(countryCode)))
+        .go();
   }
 
   // 공휴일 일괄 저장
@@ -88,6 +103,19 @@ class AppDatabase extends _$AppDatabase {
   Future<bool> isCacheValid(int year) async {
     final result = await (select(holidayTable)
           ..where((h) => h.year.equals(year))
+          ..limit(1))
+        .getSingleOrNull();
+
+    if (result == null) return false;
+
+    final cacheAge = DateTime.now().difference(result.cachedAt);
+    return cacheAge.inHours < 24;
+  }
+
+  // 캐시 유효성 확인 (24시간, 국가별)
+  Future<bool> isCacheValidForCountry(int year, String countryCode) async {
+    final result = await (select(holidayTable)
+          ..where((h) => h.year.equals(year) & h.countryCode.equals(countryCode))
           ..limit(1))
         .getSingleOrNull();
 
