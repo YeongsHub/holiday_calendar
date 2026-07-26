@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:holiday_calendar/l10n/app_localizations.dart';
 import 'package:holiday_calendar/presentation/providers/bridge_day_provider.dart';
+import 'package:holiday_calendar/presentation/providers/year_provider.dart';
 import 'package:holiday_calendar/presentation/screens/bridge_day_screen.dart';
 import 'package:intl/intl.dart';
 
@@ -45,14 +46,38 @@ class BridgeDayPreview extends ConsumerWidget {
                   ),
                 ],
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const BridgeDayScreen()),
-                  );
-                },
-                child: Text(l10n.showAll),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Jump to next year's bridge days (plan vacation early)
+                  TextButton(
+                    onPressed: () async {
+                      final previousYear = ref.read(selectedYearProvider);
+                      ref
+                          .read(selectedYearProvider.notifier)
+                          .select(DateTime.now().year + 1);
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const BridgeDayScreen()),
+                      );
+                      ref
+                          .read(selectedYearProvider.notifier)
+                          .select(previousYear);
+                    },
+                    child: Text('${DateTime.now().year + 1} →'),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const BridgeDayScreen()),
+                      );
+                    },
+                    child: Text(l10n.showAll),
+                  ),
+                ],
               ),
             ],
           ),

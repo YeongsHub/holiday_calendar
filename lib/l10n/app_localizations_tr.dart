@@ -599,4 +599,28 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get yourCanton => 'Kantonunuz';
+
+  @override
+  String get grenzgaengerMode => 'Sınır ötesi modu';
+
+  @override
+  String get grenzgaengerModeSubtitle =>
+      'İkinci bir bölgenin tatillerini takvimde göster';
+
+  @override
+  String get offLabel => 'Kapalı';
+
+  @override
+  String holidayInRegion(String region) {
+    return '$region bölgesinde tatil';
+  }
+
+  @override
+  String notifNextYearBridgeTitle(int year) {
+    return '$year köprü günleri geldi! 🎉';
+  }
+
+  @override
+  String get notifNextYearBridgeBody =>
+      'En iyi günler kapılmadan iznini şimdi planla.';
 }

@@ -338,5 +338,11 @@
   "countryAustria": "Австрия",
   "countrySwitzerland": "Швейцария",
   "allCantons": "Все кантоны",
-  "yourCanton": "Ваш кантон"
+  "yourCanton": "Ваш кантон",
+  "grenzgaengerMode": "Приграничный режим",
+  "grenzgaengerModeSubtitle": "Показывать праздники второго региона в календаре",
+  "offLabel": "Выкл.",
+  "holidayInRegion": "Праздник в регионе {region}",
+  "notifNextYearBridgeTitle": "Мостовые дни {year} уже здесь! 🎉",
+  "notifNextYearBridgeBody": "Спланируйте отпуск, пока лучшие дни не разобрали."
 }

@@ -4,6 +4,7 @@ import 'package:holiday_calendar/l10n/app_localizations.dart';
 import 'package:holiday_calendar/presentation/providers/notification_provider.dart';
 import 'package:holiday_calendar/presentation/providers/school_holiday_provider.dart';
 import 'package:holiday_calendar/presentation/widgets/country_picker.dart';
+import 'package:holiday_calendar/presentation/widgets/grenzgaenger_tile.dart';
 import 'package:holiday_calendar/presentation/widgets/language_picker.dart';
 
 /// Screen for configuring Brückentage notification settings
@@ -232,6 +233,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
               ),
             ),
             const CountryPickerTile(),
+            const GrenzgaengerTile(),
 
             const Divider(),
 

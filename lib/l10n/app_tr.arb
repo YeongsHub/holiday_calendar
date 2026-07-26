@@ -338,5 +338,11 @@
   "countryAustria": "Avusturya",
   "countrySwitzerland": "İsviçre",
   "allCantons": "Tüm kantonlar",
-  "yourCanton": "Kantonunuz"
+  "yourCanton": "Kantonunuz",
+  "grenzgaengerMode": "Sınır ötesi modu",
+  "grenzgaengerModeSubtitle": "İkinci bir bölgenin tatillerini takvimde göster",
+  "offLabel": "Kapalı",
+  "holidayInRegion": "{region} bölgesinde tatil",
+  "notifNextYearBridgeTitle": "{year} köprü günleri geldi! 🎉",
+  "notifNextYearBridgeBody": "En iyi günler kapılmadan iznini şimdi planla."
 }

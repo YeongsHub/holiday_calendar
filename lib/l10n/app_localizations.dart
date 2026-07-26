@@ -1147,6 +1147,42 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Dein Kanton'**
   String get yourCanton;
+
+  /// No description provided for @grenzgaengerMode.
+  ///
+  /// In de, this message translates to:
+  /// **'Grenzgänger-Modus'**
+  String get grenzgaengerMode;
+
+  /// No description provided for @grenzgaengerModeSubtitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Feiertage einer zweiten Region im Kalender anzeigen'**
+  String get grenzgaengerModeSubtitle;
+
+  /// No description provided for @offLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Aus'**
+  String get offLabel;
+
+  /// No description provided for @holidayInRegion.
+  ///
+  /// In de, this message translates to:
+  /// **'Feiertag in {region}'**
+  String holidayInRegion(String region);
+
+  /// No description provided for @notifNextYearBridgeTitle.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Brückentage {year} sind da! 🎉'**
+  String notifNextYearBridgeTitle(int year);
+
+  /// No description provided for @notifNextYearBridgeBody.
+  ///
+  /// In de, this message translates to:
+  /// **'Plane jetzt deinen Urlaub, bevor die besten Tage vergeben sind.'**
+  String get notifNextYearBridgeBody;
 }
 
 class _AppLocalizationsDelegate

@@ -317,6 +317,39 @@ class NotificationService {
     }
   }
 
+  // Next-year bridge days teaser ID
+  static const int _nextYearTeaserId = 8201;
+
+  /// Schedule the yearly "Brückentage {nextYear} sind da" teaser.
+  ///
+  /// Germans lock in next year's vacation in autumn — the teaser fires on
+  /// Oct 1 at 10am and deep-links into the bridge day planner. Gated on the
+  /// same preference as bridge day reminders.
+  Future<void> scheduleNextYearBridgeTeaser() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool('brueckentag_notifications_enabled') != true) {
+      await _notifications.cancel(_nextYearTeaserId);
+      return;
+    }
+
+    await _notifications.cancel(_nextYearTeaserId);
+
+    final now = DateTime.now();
+    var target = DateTime(now.year, 10, 1, 10, 0);
+    if (!target.isAfter(now)) {
+      target = DateTime(now.year + 1, 10, 1, 10, 0);
+    }
+
+    final (:l10n, languageCode: _) = await LocalizationHelper.current();
+    await scheduleBrueckentagReminder(
+      id: _nextYearTeaserId,
+      title: l10n.notifNextYearBridgeTitle(target.year + 1),
+      body: l10n.notifNextYearBridgeBody,
+      scheduledDate: target,
+      payload: 'next_year_bridge_teaser',
+    );
+  }
+
   /// Single entry point that refreshes every recurring notification type from
   /// the current holiday list. Call this whenever fresh holiday data loads
   /// (e.g. on app open). Each sub-scheduler self-gates on its enabled flag.
@@ -329,6 +362,7 @@ class NotificationService {
     try {
       await scheduleHolidayReminders(holidays);
       await scheduleMonthlyHolidaySummary(holidays);
+      await scheduleNextYearBridgeTeaser();
     } catch (e) {
       if (kDebugMode) {
         debugPrint('refreshScheduledNotifications failed: $e');

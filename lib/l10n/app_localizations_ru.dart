@@ -602,4 +602,28 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get yourCanton => 'Ваш кантон';
+
+  @override
+  String get grenzgaengerMode => 'Приграничный режим';
+
+  @override
+  String get grenzgaengerModeSubtitle =>
+      'Показывать праздники второго региона в календаре';
+
+  @override
+  String get offLabel => 'Выкл.';
+
+  @override
+  String holidayInRegion(String region) {
+    return 'Праздник в регионе $region';
+  }
+
+  @override
+  String notifNextYearBridgeTitle(int year) {
+    return 'Мостовые дни $year уже здесь! 🎉';
+  }
+
+  @override
+  String get notifNextYearBridgeBody =>
+      'Спланируйте отпуск, пока лучшие дни не разобрали.';
 }

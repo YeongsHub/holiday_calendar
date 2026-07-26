@@ -338,5 +338,11 @@
   "countryAustria": "Austria",
   "countrySwitzerland": "Switzerland",
   "allCantons": "All cantons",
-  "yourCanton": "Your canton"
+  "yourCanton": "Your canton",
+  "grenzgaengerMode": "Cross-border mode",
+  "grenzgaengerModeSubtitle": "Show a second region's holidays in the calendar",
+  "offLabel": "Off",
+  "holidayInRegion": "Holiday in {region}",
+  "notifNextYearBridgeTitle": "The {year} bridge days are here! 🎉",
+  "notifNextYearBridgeBody": "Plan your vacation now, before the best days are taken."
 }

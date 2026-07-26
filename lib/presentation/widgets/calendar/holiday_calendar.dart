@@ -8,6 +8,7 @@ import 'package:holiday_calendar/presentation/providers/db_vacation_provider.dar
 import 'package:holiday_calendar/presentation/providers/holiday_provider.dart';
 import 'package:holiday_calendar/presentation/providers/month_provider.dart';
 import 'package:holiday_calendar/presentation/providers/school_holiday_provider.dart';
+import 'package:holiday_calendar/presentation/providers/second_region_provider.dart';
 import 'package:holiday_calendar/presentation/providers/state_provider.dart';
 import 'package:holiday_calendar/presentation/providers/year_provider.dart';
 import 'package:holiday_calendar/presentation/widgets/calendar/date_detail_sheet.dart';
@@ -31,6 +32,7 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
     final holidaysByDate = ref.watch(holidaysByDateProvider);
     final schoolHolidaysByDate = ref.watch(schoolHolidaysByDateProvider);
     final vacationsByDate = ref.watch(dbVacationsByDateProvider);
+    final secondRegionByDate = ref.watch(secondRegionHolidaysByDateProvider);
     final selectedState = ref.watch(selectedFederalStateProvider);
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context)!;
@@ -136,8 +138,15 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
               schoolHolidaysByDate.containsKey(normalizedDate);
           final hasHoliday = events.isNotEmpty;
           final isVacation = vacationsByDate.containsKey(normalizedDate);
+          final isSecondRegionHoliday =
+              secondRegionByDate.containsKey(normalizedDate);
 
-          if (!hasHoliday && !isSchoolHoliday && !isVacation) return null;
+          if (!hasHoliday &&
+              !isSchoolHoliday &&
+              !isVacation &&
+              !isSecondRegionHoliday) {
+            return null;
+          }
 
           final dots = <Widget>[];
 
@@ -177,6 +186,18 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
             ));
           }
 
+          // Grenzgänger overlay: holiday in the second region
+          if (isSecondRegionHoliday) {
+            dots.add(Container(
+              width: 6,
+              height: 6,
+              decoration: const BoxDecoration(
+                color: Colors.teal,
+                shape: BoxShape.circle,
+              ),
+            ));
+          }
+
           return Positioned(
             bottom: 10,
             child: Row(
@@ -205,6 +226,7 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
           holidaysByDate,
           schoolHolidaysByDate,
           vacationsByDate,
+          secondRegionByDate,
           selectedState?.nameDE ?? l10n.allStates,
         );
       },
@@ -305,12 +327,15 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
     Map<DateTime, List<Holiday>> holidaysByDate,
     Map<DateTime, SchoolHoliday> schoolHolidaysByDate,
     Map<DateTime, Vacation> vacationsByDate,
+    Map<DateTime, List<Holiday>> secondRegionByDate,
     String bundesland,
   ) {
     final normalizedDay = DateTime(day.year, day.month, day.day);
     final holidays = holidaysByDate[normalizedDay] ?? [];
     final schoolHoliday = schoolHolidaysByDate[normalizedDay];
     final vacation = vacationsByDate[normalizedDay];
+    final secondRegionHolidays = secondRegionByDate[normalizedDay] ?? [];
+    final secondRegion = ref.read(secondRegionProvider);
 
     showModalBottomSheet(
       context: context,
@@ -322,6 +347,8 @@ class _HolidayCalendarState extends ConsumerState<HolidayCalendar> {
         bundesland: bundesland,
         schoolHoliday: schoolHoliday,
         vacation: vacation,
+        secondRegionHolidays: secondRegionHolidays,
+        secondRegionName: secondRegion?.nameDE,
         onAddVacation: () {
           Navigator.pop(ctx);
           _showAddVacationDialog(context, day, ref);

@@ -601,4 +601,28 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yourCanton => 'Dein Kanton';
+
+  @override
+  String get grenzgaengerMode => 'Grenzgänger-Modus';
+
+  @override
+  String get grenzgaengerModeSubtitle =>
+      'Feiertage einer zweiten Region im Kalender anzeigen';
+
+  @override
+  String get offLabel => 'Aus';
+
+  @override
+  String holidayInRegion(String region) {
+    return 'Feiertag in $region';
+  }
+
+  @override
+  String notifNextYearBridgeTitle(int year) {
+    return 'Die Brückentage $year sind da! 🎉';
+  }
+
+  @override
+  String get notifNextYearBridgeBody =>
+      'Plane jetzt deinen Urlaub, bevor die besten Tage vergeben sind.';
 }

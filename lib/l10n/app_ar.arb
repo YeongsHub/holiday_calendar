@@ -338,5 +338,11 @@
   "countryAustria": "النمسا",
   "countrySwitzerland": "سويسرا",
   "allCantons": "جميع الكانتونات",
-  "yourCanton": "الكانتون الخاص بك"
+  "yourCanton": "الكانتون الخاص بك",
+  "grenzgaengerMode": "وضع العابرين للحدود",
+  "grenzgaengerModeSubtitle": "عرض عطلات منطقة ثانية في التقويم",
+  "offLabel": "إيقاف",
+  "holidayInRegion": "عطلة في {region}",
+  "notifNextYearBridgeTitle": "أيام الجسر لعام {year} وصلت! 🎉",
+  "notifNextYearBridgeBody": "خطّط لإجازتك الآن قبل أن تُحجز أفضل الأيام."
 }

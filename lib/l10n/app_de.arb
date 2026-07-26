@@ -345,5 +345,25 @@
   "countryAustria": "Österreich",
   "countrySwitzerland": "Schweiz",
   "allCantons": "Alle Kantone",
-  "yourCanton": "Dein Kanton"
+  "yourCanton": "Dein Kanton",
+  "grenzgaengerMode": "Grenzgänger-Modus",
+  "grenzgaengerModeSubtitle": "Feiertage einer zweiten Region im Kalender anzeigen",
+  "offLabel": "Aus",
+  "holidayInRegion": "Feiertag in {region}",
+  "notifNextYearBridgeTitle": "Die Brückentage {year} sind da! 🎉",
+  "notifNextYearBridgeBody": "Plane jetzt deinen Urlaub, bevor die besten Tage vergeben sind.",
+  "@holidayInRegion": {
+    "placeholders": {
+      "region": {
+        "type": "String"
+      }
+    }
+  },
+  "@notifNextYearBridgeTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  }
 }

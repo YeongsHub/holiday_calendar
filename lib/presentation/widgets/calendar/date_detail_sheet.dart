@@ -14,6 +14,8 @@ class DateDetailSheet extends StatelessWidget {
   final String bundesland;
   final SchoolHoliday? schoolHoliday;
   final Vacation? vacation;
+  final List<Holiday> secondRegionHolidays;
+  final String? secondRegionName;
   final VoidCallback? onAddVacation;
   final VoidCallback? onDeleteVacation;
 
@@ -24,6 +26,8 @@ class DateDetailSheet extends StatelessWidget {
     required this.bundesland,
     this.schoolHoliday,
     this.vacation,
+    this.secondRegionHolidays = const [],
+    this.secondRegionName,
     this.onAddVacation,
     this.onDeleteVacation,
   });
@@ -158,6 +162,17 @@ class DateDetailSheet extends StatelessWidget {
                       ? Text(l10n.regional)
                       : null,
             ),
+
+            // Grenzgänger: holiday in the second region
+            if (secondRegionHolidays.isNotEmpty && secondRegionName != null) ...[
+              ListTile(
+                leading: const Icon(Icons.swap_horiz, color: Colors.teal),
+                title: Text(
+                  secondRegionHolidays.first.displayName(languageCode),
+                ),
+                subtitle: Text(l10n.holidayInRegion(secondRegionName!)),
+              ),
+            ],
 
             // School holiday info
             if (schoolHoliday != null) ...[

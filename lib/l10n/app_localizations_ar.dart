@@ -602,4 +602,27 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get yourCanton => 'الكانتون الخاص بك';
+
+  @override
+  String get grenzgaengerMode => 'وضع العابرين للحدود';
+
+  @override
+  String get grenzgaengerModeSubtitle => 'عرض عطلات منطقة ثانية في التقويم';
+
+  @override
+  String get offLabel => 'إيقاف';
+
+  @override
+  String holidayInRegion(String region) {
+    return 'عطلة في $region';
+  }
+
+  @override
+  String notifNextYearBridgeTitle(int year) {
+    return 'أيام الجسر لعام $year وصلت! 🎉';
+  }
+
+  @override
+  String get notifNextYearBridgeBody =>
+      'خطّط لإجازتك الآن قبل أن تُحجز أفضل الأيام.';
 }

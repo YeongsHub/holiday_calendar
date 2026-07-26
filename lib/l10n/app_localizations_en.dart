@@ -600,4 +600,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yourCanton => 'Your canton';
+
+  @override
+  String get grenzgaengerMode => 'Cross-border mode';
+
+  @override
+  String get grenzgaengerModeSubtitle =>
+      'Show a second region\'s holidays in the calendar';
+
+  @override
+  String get offLabel => 'Off';
+
+  @override
+  String holidayInRegion(String region) {
+    return 'Holiday in $region';
+  }
+
+  @override
+  String notifNextYearBridgeTitle(int year) {
+    return 'The $year bridge days are here! 🎉';
+  }
+
+  @override
+  String get notifNextYearBridgeBody =>
+      'Plan your vacation now, before the best days are taken.';
 }
