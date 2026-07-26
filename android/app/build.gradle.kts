@@ -30,7 +30,7 @@ if (dartDefinesEncoded.isNotEmpty()) {
 
 android {
     namespace = "com.gridnflow.feiertage.kalender"
-    compileSdk = 36
+    compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -49,7 +49,9 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
-        targetSdk = 35
+        // Track Flutter's default (36 on current stable) so Play's yearly
+        // target-API deadline is met by simply upgrading Flutter.
+        targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
         manifestPlaceholders["ADMOB_APP_ID"] = dartDefines["ADMOB_APP_ID"] ?: ""
