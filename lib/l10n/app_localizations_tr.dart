@@ -9,7 +9,7 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get appTitle => 'Almanya Resmi Tatilleri';
+  String get appTitle => 'Resmi Tatiller DE AT CH';
 
   @override
   String get holidays => 'Resmi tatiller';

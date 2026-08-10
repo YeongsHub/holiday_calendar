@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get appTitle => 'Feiertage Deutschland';
+  String get appTitle => 'Feiertage DE AT CH';
 
   @override
   String get holidays => 'Feiertage';

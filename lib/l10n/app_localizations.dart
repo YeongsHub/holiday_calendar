@@ -107,7 +107,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In de, this message translates to:
-  /// **'Feiertage Deutschland'**
+  /// **'Feiertage DE AT CH'**
   String get appTitle;
 
   /// No description provided for @holidays.

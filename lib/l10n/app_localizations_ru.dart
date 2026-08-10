@@ -9,7 +9,7 @@ class AppLocalizationsRu extends AppLocalizations {
   AppLocalizationsRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appTitle => 'Праздники Германии';
+  String get appTitle => 'Праздники DE AT CH';
 
   @override
   String get holidays => 'Праздники';

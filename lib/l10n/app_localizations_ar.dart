@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'العطلات الرسمية في ألمانيا';
+  String get appTitle => 'العطلات الرسمية DE AT CH';
 
   @override
   String get holidays => 'العطلات الرسمية';
