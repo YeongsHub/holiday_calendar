@@ -142,7 +142,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get dataSourceBody =>
-      'تستند بيانات العطلات الرسمية إلى اللوائح القانونية الرسمية لجمهورية ألمانيا الاتحادية. المصادر المعتمدة هي:';
+      'تستند بيانات العطلات إلى المنشورات الرسمية لألمانيا والنمسا وسويسرا. المصادر المعتمدة هي:';
 
   @override
   String get sourceBmiLabel =>
@@ -625,4 +625,12 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get notifNextYearBridgeBody =>
       'خطّط لإجازتك الآن قبل أن تُحجز أفضل الأيام.';
+
+  @override
+  String get sourceAustriaLabel =>
+      'النمسا: oesterreich.gv.at (البوابة الرسمية)';
+
+  @override
+  String get sourceSwitzerlandLabel =>
+      'سويسرا: ch.ch (البوابة الاتحادية الرسمية)';
 }

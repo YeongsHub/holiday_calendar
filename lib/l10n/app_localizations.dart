@@ -365,7 +365,7 @@ abstract class AppLocalizations {
   /// No description provided for @dataSourceBody.
   ///
   /// In de, this message translates to:
-  /// **'Die Feiertagsdaten basieren auf offiziellen gesetzlichen Regelungen der Bundesrepublik Deutschland. Maßgebliche Quellen sind:'**
+  /// **'Die Feiertagsdaten basieren auf den amtlichen Veröffentlichungen von Deutschland, Österreich und der Schweiz. Maßgebliche Quellen sind:'**
   String get dataSourceBody;
 
   /// No description provided for @sourceBmiLabel.
@@ -1183,6 +1183,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Plane jetzt deinen Urlaub, bevor die besten Tage vergeben sind.'**
   String get notifNextYearBridgeBody;
+
+  /// No description provided for @sourceAustriaLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Österreich: oesterreich.gv.at (amtliches Portal)'**
+  String get sourceAustriaLabel;
+
+  /// No description provided for @sourceSwitzerlandLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Schweiz: ch.ch (Portal von Bund und Kantonen)'**
+  String get sourceSwitzerlandLabel;
 }
 
 class _AppLocalizationsDelegate

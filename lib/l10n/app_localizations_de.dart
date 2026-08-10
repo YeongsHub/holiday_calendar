@@ -142,7 +142,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dataSourceBody =>
-      'Die Feiertagsdaten basieren auf offiziellen gesetzlichen Regelungen der Bundesrepublik Deutschland. Maßgebliche Quellen sind:';
+      'Die Feiertagsdaten basieren auf den amtlichen Veröffentlichungen von Deutschland, Österreich und der Schweiz. Maßgebliche Quellen sind:';
 
   @override
   String get sourceBmiLabel => 'BMI – Nationale Feiertage';
@@ -625,4 +625,12 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get notifNextYearBridgeBody =>
       'Plane jetzt deinen Urlaub, bevor die besten Tage vergeben sind.';
+
+  @override
+  String get sourceAustriaLabel =>
+      'Österreich: oesterreich.gv.at (amtliches Portal)';
+
+  @override
+  String get sourceSwitzerlandLabel =>
+      'Schweiz: ch.ch (Portal von Bund und Kantonen)';
 }

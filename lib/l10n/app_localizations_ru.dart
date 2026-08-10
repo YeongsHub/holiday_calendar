@@ -142,7 +142,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get dataSourceBody =>
-      'Данные о праздниках основаны на официальных законодательных нормах Федеративной Республики Германия. Основные источники:';
+      'Данные о праздниках основаны на официальных публикациях Германии, Австрии и Швейцарии. Авторитетные источники:';
 
   @override
   String get sourceBmiLabel => 'BMI — Национальные праздники';
@@ -626,4 +626,11 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get notifNextYearBridgeBody =>
       'Спланируйте отпуск, пока лучшие дни не разобрали.';
+
+  @override
+  String get sourceAustriaLabel =>
+      'Австрия: oesterreich.gv.at (официальный портал)';
+
+  @override
+  String get sourceSwitzerlandLabel => 'Швейцария: ch.ch (официальный портал)';
 }

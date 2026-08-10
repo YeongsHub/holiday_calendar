@@ -142,7 +142,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get dataSourceBody =>
-      'Resmi tatil verileri, Almanya Federal Cumhuriyeti\'nin resmi yasal düzenlemelerine dayanmaktadır. Yetkili kaynaklar şunlardır:';
+      'Tatil verileri Almanya, Avusturya ve İsviçre\'nin resmî yayınlarına dayanmaktadır. Bağlayıcı kaynaklar:';
 
   @override
   String get sourceBmiLabel => 'BMI – Ulusal resmi tatiller';
@@ -623,4 +623,11 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get notifNextYearBridgeBody =>
       'En iyi günler kapılmadan iznini şimdi planla.';
+
+  @override
+  String get sourceAustriaLabel =>
+      'Avusturya: oesterreich.gv.at (resmî portal)';
+
+  @override
+  String get sourceSwitzerlandLabel => 'İsviçre: ch.ch (resmî federal portal)';
 }

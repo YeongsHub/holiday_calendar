@@ -53,7 +53,7 @@
   "importantInfoHeader": "⚠️ ÖNEMLİ BİLGİLER",
   "disclaimerBody": "Bu uygulama resmi bir devlet uygulaması DEĞİLDİR ve herhangi bir devlet kurumuyla bağlantısı yoktur. Bağımsız, özel bir bilgilendirme hizmetidir. Bağlayıcı bilgiler için lütfen doğrudan yetkili makamlara başvurun.",
   "dataSource": "Veri kaynağı",
-  "dataSourceBody": "Resmi tatil verileri, Almanya Federal Cumhuriyeti'nin resmi yasal düzenlemelerine dayanmaktadır. Yetkili kaynaklar şunlardır:",
+  "dataSourceBody": "Tatil verileri Almanya, Avusturya ve İsviçre'nin resmî yayınlarına dayanmaktadır. Bağlayıcı kaynaklar:",
   "sourceBmiLabel": "BMI – Ulusal resmi tatiller",
   "technicalImplementation": "Teknik uygulama",
   "technicalImplementationBody": "Verilerin teknik olarak sağlanması için, yukarıda belirtilen resmi kaynaklardan resmi tatil bilgilerini derleyen OpenHolidays API kullanılır.",
@@ -344,5 +344,7 @@
   "offLabel": "Kapalı",
   "holidayInRegion": "{region} bölgesinde tatil",
   "notifNextYearBridgeTitle": "{year} köprü günleri geldi! 🎉",
-  "notifNextYearBridgeBody": "En iyi günler kapılmadan iznini şimdi planla."
+  "notifNextYearBridgeBody": "En iyi günler kapılmadan iznini şimdi planla.",
+  "sourceAustriaLabel": "Avusturya: oesterreich.gv.at (resmî portal)",
+  "sourceSwitzerlandLabel": "İsviçre: ch.ch (resmî federal portal)"
 }

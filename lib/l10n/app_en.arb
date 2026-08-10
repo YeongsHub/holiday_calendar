@@ -53,7 +53,7 @@
   "importantInfoHeader": "⚠️ IMPORTANT INFORMATION",
   "disclaimerBody": "This app is NOT an official government application and is not affiliated with any government agency. It is an independent, private information service. For binding information, please contact the relevant authorities directly.",
   "dataSource": "Data Source",
-  "dataSourceBody": "The holiday data is based on the official statutory regulations of the Federal Republic of Germany. The authoritative sources are:",
+  "dataSourceBody": "Holiday data is based on the official publications of Germany, Austria and Switzerland. The authoritative sources are:",
   "sourceBmiLabel": "BMI – National Holidays",
   "technicalImplementation": "Technical Implementation",
   "technicalImplementationBody": "The OpenHolidays API is used to technically provide the data, aggregating holiday information from the official sources mentioned above.",
@@ -344,5 +344,7 @@
   "offLabel": "Off",
   "holidayInRegion": "Holiday in {region}",
   "notifNextYearBridgeTitle": "The {year} bridge days are here! 🎉",
-  "notifNextYearBridgeBody": "Plan your vacation now, before the best days are taken."
+  "notifNextYearBridgeBody": "Plan your vacation now, before the best days are taken.",
+  "sourceAustriaLabel": "Austria: oesterreich.gv.at (official portal)",
+  "sourceSwitzerlandLabel": "Switzerland: ch.ch (official federal portal)"
 }

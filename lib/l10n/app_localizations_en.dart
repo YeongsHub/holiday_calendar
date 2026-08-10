@@ -142,7 +142,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dataSourceBody =>
-      'The holiday data is based on the official statutory regulations of the Federal Republic of Germany. The authoritative sources are:';
+      'Holiday data is based on the official publications of Germany, Austria and Switzerland. The authoritative sources are:';
 
   @override
   String get sourceBmiLabel => 'BMI – National Holidays';
@@ -624,4 +624,12 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get notifNextYearBridgeBody =>
       'Plan your vacation now, before the best days are taken.';
+
+  @override
+  String get sourceAustriaLabel =>
+      'Austria: oesterreich.gv.at (official portal)';
+
+  @override
+  String get sourceSwitzerlandLabel =>
+      'Switzerland: ch.ch (official federal portal)';
 }

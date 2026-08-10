@@ -52,6 +52,16 @@ class HomeScreen extends ConsumerWidget {
                 label: l10n.sourceBmiLabel,
                 url: 'https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-node.html',
               ),
+              const SizedBox(height: 8),
+              _SourceLink(
+                label: l10n.sourceAustriaLabel,
+                url: 'https://www.oesterreich.gv.at',
+              ),
+              const SizedBox(height: 8),
+              _SourceLink(
+                label: l10n.sourceSwitzerlandLabel,
+                url: 'https://www.ch.ch',
+              ),
               const SizedBox(height: 16),
               Text(
                 l10n.technicalImplementation,

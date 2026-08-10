@@ -53,7 +53,7 @@
   "importantInfoHeader": "⚠️ WICHTIGE INFORMATIONEN",
   "disclaimerBody": "Diese App ist KEINE offizielle Regierungsanwendung und steht in keiner Verbindung zu staatlichen Stellen. Es handelt sich um ein unabhängiges, privates Informationsangebot. Für verbindliche Informationen wenden Sie sich bitte direkt an die zuständigen Behörden.",
   "dataSource": "Datenquelle",
-  "dataSourceBody": "Die Feiertagsdaten basieren auf offiziellen gesetzlichen Regelungen der Bundesrepublik Deutschland. Maßgebliche Quellen sind:",
+  "dataSourceBody": "Die Feiertagsdaten basieren auf den amtlichen Veröffentlichungen von Deutschland, Österreich und der Schweiz. Maßgebliche Quellen sind:",
   "sourceBmiLabel": "BMI – Nationale Feiertage",
   "technicalImplementation": "Technische Umsetzung",
   "technicalImplementationBody": "Zur technischen Bereitstellung der Daten wird die OpenHolidays API genutzt, die Feiertagsinformationen aus den oben genannten offiziellen Quellen aggregiert.",
@@ -365,5 +365,7 @@
         "type": "int"
       }
     }
-  }
+  },
+  "sourceAustriaLabel": "Österreich: oesterreich.gv.at (amtliches Portal)",
+  "sourceSwitzerlandLabel": "Schweiz: ch.ch (Portal von Bund und Kantonen)"
 }
