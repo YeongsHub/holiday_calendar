@@ -71,6 +71,16 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
+
+    packaging {
+        jniLibs {
+            // androidx.datastore ships this helper compiled with NDK r20,
+            // which trips Play's 16KB/old-NDK check. It is only loaded by
+            // multi-process DataStore; shared_preferences uses the
+            // single-process path, so the app never loads it.
+            excludes += "lib/**/libdatastore_shared_counter.so"
+        }
+    }
 }
 
 flutter {
