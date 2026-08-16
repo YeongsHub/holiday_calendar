@@ -1,31 +1,41 @@
-Feiertage DE – Dein smarter Begleiter für Feiertage und Brückentage in Deutschland!
+🗓️ Feiertage – Alle Feiertage, Brückentage und Ferien für DE, AT & CH
 
-Alle gesetzlichen Feiertage für alle 16 Bundesländer
-Brückentage-Rechner: Maximiere deinen Urlaub mit wenigen Urlaubstagen
-Effizienz-Score: Erfahre, wie viele freie Tage du pro Urlaubstag bekommst
-Jahresübersicht mit Monatsansicht
-Erinnerungen für die besten Brückentage
-Home-Screen Widget für den nächsten Feiertag
+Wann ist der nächste Feiertag? Wie hole ich mit wenigen Urlaubstagen die längste Auszeit heraus? Diese App beantwortet beide Fragen – für alle 16 deutschen Bundesländer, alle 9 österreichischen Bundesländer und alle 26 Schweizer Kantone.
 
-Nie wieder Urlaubstage verschwenden! Feiertage DE berechnet automatisch die besten Brückentage-Kombinationen für dein Bundesland und zeigt dir, wie du mit minimalen Urlaubstagen maximale Freizeit bekommst.
+✨ FUNKTIONEN
+✓ Gesetzliche Feiertage für Deutschland, Österreich und die Schweiz – aktuell und für die kommenden Jahre
+✓ Brückentage-Rechner: Zeigt dir, wie du aus 4 Urlaubstagen bis zu 9 freie Tage machst
+✓ Brückentage 2027: Schon jetzt die besten Urlaubsfenster fürs nächste Jahr sichern
+✓ Urlaubs-Effizienz: Jede Empfehlung mit Urlaubstagen, freien Tagen und Effizienz-Score
+✓ Schulferien nach Bundesland bzw. Kanton – ideal für die Familienplanung
+✓ Grenzgänger-Modus (Premium): Feiertage einer zweiten Region – z. B. Wohnort und Arbeitsort – gemeinsam im Kalender
+✓ D-Day Widget: Countdown zum nächsten Feiertag direkt auf dem Homescreen
+✓ Jahresübersicht: Das ganze Jahr kompakt auf einem Bildschirm
+✓ Erinnerungen: Nie wieder einen Feiertag oder Brückentag verpassen
+✓ Kalender-Export: Feiertage in deinen Kalender übernehmen
 
-BRÜCKENTAGE-RECHNER
-Gib einfach dein Bundesland an und Feiertage DE findet sofort die besten Brückentage für dich. Der Effizienz-Score zeigt dir auf einen Blick, wie viele freie Tage du pro eingesetztem Urlaubstag bekommst.
+🌉 BRÜCKENTAGE CLEVER NUTZEN
+Der Brückentage-Rechner analysiert Feiertage und Wochenenden und schlägt dir die effizientesten Urlaubszeiträume vor. Perfekt, um den Jahresurlaub früh zu planen – bevor die Kollegen schneller sind. 😉
 
-ALLE 16 BUNDESLÄNDER
-Egal ob Bayern, NRW, Baden-Württemberg oder Berlin – wähle dein Bundesland und sieh nur die Feiertage, die für dich gelten. Komplett und aktuell.
+🌍 DREI LÄNDER, EINE APP
+• 🇩🇪 Deutschland: alle 16 Bundesländer
+• 🇦🇹 Österreich: alle 9 Bundesländer
+• 🇨🇭 Schweiz: alle 26 Kantone – inklusive regionaler Feiertage
+Einfach Land und Region wählen, der Rest passiert automatisch.
 
-JAHRESÜBERSICHT
-Die übersichtliche 12-Monats-Ansicht gibt dir den perfekten Überblick über alle Feiertage und Brückentage im Jahr.
+🏛️ AMTLICHE QUELLEN
+Die Feiertagsdaten basieren auf den amtlichen Veröffentlichungen der jeweiligen Länder:
+• Deutschland – Bundesministerium des Innern: https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-node.html
+• Österreich – Amtliches Portal: https://www.oesterreich.gv.at
+• Schweiz – Portal von Bund und Kantonen: https://www.ch.ch
+Zur technischen Bereitstellung wird die OpenHolidays API (https://www.openholidaysapi.org) genutzt.
 
-ERINNERUNGEN
-Verpasse nie wieder einen Brückentag! Stelle individuelle Erinnerungen ein, damit du rechtzeitig deinen Urlaub planen kannst.
+Hinweis: Diese App ist KEINE offizielle Regierungs-App und steht in keiner Verbindung zu staatlichen Stellen. Für verbindliche Auskünfte wende dich bitte direkt an die zuständigen Behörden bzw. die oben genannten amtlichen Quellen.
 
-HOME-SCREEN WIDGET
-Sieh deinen nächsten Feiertag direkt auf dem Startbildschirm – ohne die App zu öffnen.
+🗣️ MEHRSPRACHIG
+Deutsch, Englisch, Türkisch, Russisch und Arabisch.
 
-Unterstützte Bundesländer: Bayern, Baden-Württemberg, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen.
+⭐ PREMIUM
+Einmalig zahlen: für immer werbefrei + Grenzgänger-Modus freischalten.
 
-Datenquelle: OpenHolidays API & BMI (Bundesministerium des Innern)
-
-Weniger Urlaubstage, mehr Freizeit.
+Lade die App jetzt kostenlos herunter und plane deinen Urlaub wie ein Profi! 🏖️

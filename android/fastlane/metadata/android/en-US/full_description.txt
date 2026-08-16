@@ -1,31 +1,41 @@
-Feiertage DE – Your smart companion for public holidays and bridge days in Germany!
+🗓️ Feiertage – All public holidays, bridge days and school breaks for DE, AT & CH
 
-All public holidays for all 16 federal states
-Bridge Days Calculator: Maximize your vacation with fewer days off
-Efficiency Score: See how many free days you get per vacation day used
-Year overview with monthly view
-Reminders for the best bridge days
-Home screen widget for the next public holiday
+When is the next public holiday? How do I get the longest time off with the fewest vacation days? This app answers both questions – for all 16 German federal states, all 9 Austrian federal states and all 26 Swiss cantons.
 
-Never waste vacation days again! Feiertage DE automatically calculates the best bridge day combinations for your federal state and shows you how to get maximum time off with minimal vacation days.
+✨ FEATURES
+✓ Public holidays for Germany, Austria and Switzerland – up to date and for the years ahead
+✓ Bridge Days Calculator: Shows you how to turn 4 vacation days into up to 9 days off
+✓ Bridge Days 2027: Secure the best vacation windows for next year already
+✓ Vacation efficiency: Every recommendation with vacation days used, days off gained and an efficiency score
+✓ School holidays by federal state or canton – ideal for family planning
+✓ Cross-Border Mode (Premium): Holidays of a second region – e.g. where you live and where you work – together in one calendar
+✓ D-Day Widget: Countdown to the next holiday right on your home screen
+✓ Year overview: The whole year at a glance on one screen
+✓ Reminders: Never miss a holiday or bridge day again
+✓ Calendar export: Add holidays to your own calendar
 
-BRIDGE DAYS CALCULATOR
-Simply select your federal state and Feiertage DE instantly finds the best bridge days for you. The efficiency score shows you at a glance how many free days you get per vacation day used.
+🌉 USE BRIDGE DAYS SMARTLY
+The Bridge Days Calculator analyzes holidays and weekends and suggests the most efficient vacation periods. Perfect for planning your annual leave early – before your colleagues beat you to it. 😉
 
-ALL 16 FEDERAL STATES
-Whether Bavaria, NRW, Baden-Württemberg or Berlin – select your state and see only the holidays that apply to you. Complete and up-to-date.
+🌍 THREE COUNTRIES, ONE APP
+• 🇩🇪 Germany: all 16 federal states
+• 🇦🇹 Austria: all 9 federal states
+• 🇨🇭 Switzerland: all 26 cantons – including regional holidays
+Simply choose your country and region, the rest happens automatically.
 
-YEAR OVERVIEW
-The clear 12-month view gives you the perfect overview of all holidays and bridge days throughout the year.
+🏛️ OFFICIAL SOURCES
+The holiday data is based on the official publications of each country:
+• Germany – Federal Ministry of the Interior: https://www.bmi.bund.de/DE/themen/verfassung/staatliche-symbole/nationale-feiertage/nationale-feiertage-node.html
+• Austria – Official government portal: https://www.oesterreich.gv.at
+• Switzerland – Portal of the federal government and cantons: https://www.ch.ch
+The OpenHolidays API (https://www.openholidaysapi.org) is used for technical data provision.
 
-REMINDERS
-Never miss a bridge day again! Set individual reminders so you can plan your vacation in time.
+Note: This app is NOT an official government app and is not affiliated with any government agency. For binding information, please contact the relevant authorities or the official sources listed above.
 
-HOME SCREEN WIDGET
-See your next public holiday right on the home screen – without opening the app.
+🗣️ MULTILINGUAL
+German, English, Turkish, Russian and Arabic.
 
-Supported states: Bavaria, Baden-Württemberg, Berlin, Brandenburg, Bremen, Hamburg, Hesse, Mecklenburg-Western Pomerania, Lower Saxony, North Rhine-Westphalia, Rhineland-Palatinate, Saarland, Saxony, Saxony-Anhalt, Schleswig-Holstein, Thuringia.
+⭐ PREMIUM
+Pay once: ad-free forever + unlock Cross-Border Mode.
 
-Data source: OpenHolidays API & BMI (Federal Ministry of the Interior)
-
-Fewer vacation days, more free time.
+Download the app for free now and plan your vacation like a pro! 🏖️
